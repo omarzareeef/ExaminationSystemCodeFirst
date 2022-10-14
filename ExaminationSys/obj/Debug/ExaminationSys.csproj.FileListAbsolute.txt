@@ -1,0 +1,69 @@
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\bin\Debug\ExaminationSys.exe.config
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\bin\Debug\ExaminationSys.exe
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\bin\Debug\ExaminationSys.pdb
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\bin\Debug\EntityFramework.dll
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\bin\Debug\EntityFramework.xml
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\obj\Debug\ExaminationSys.csproj.AssemblyReference.cache
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\obj\Debug\ExaminationSys.csproj.SuggestedBindingRedirects.cache
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\obj\Debug\ExaminationSys.Properties.Resources.resources
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\obj\Debug\ExaminationSys.csproj.GenerateResource.cache
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\obj\Debug\ExaminationSys.csproj.CoreCompileInputs.cache
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\obj\Debug\ExaminationSys.csproj.CopyComplete
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\obj\Debug\ExaminationSys.exe
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\obj\Debug\ExaminationSys.pdb
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\obj\Debug\ExaminationSys.Migrations.init.resources
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\bin\Debug\MetroSet UI.dll
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\obj\Debug\ExaminationSys.Migrations.update1.resources
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\obj\Debug\ExaminationSys.Form1.resources
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\obj\Debug\ExaminationSys.Login.resources
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\obj\Debug\ExaminationSys.Migrations.update2.resources
+C:\Users\omarz\source\repos\ExaminationSys\ExaminationSys\obj\Debug\ExaminationSys.Migrations.update3.resources
+F:\ITI\C# Project\Git C# Project\ExaminationSys\bin\Debug\ExaminationSys.exe.config
+F:\ITI\C# Project\Git C# Project\ExaminationSys\bin\Debug\ExaminationSys.exe
+F:\ITI\C# Project\Git C# Project\ExaminationSys\bin\Debug\ExaminationSys.pdb
+F:\ITI\C# Project\Git C# Project\ExaminationSys\bin\Debug\EntityFramework.dll
+F:\ITI\C# Project\Git C# Project\ExaminationSys\bin\Debug\EntityFramework.SqlServer.dll
+F:\ITI\C# Project\Git C# Project\ExaminationSys\bin\Debug\MetroSet UI.dll
+F:\ITI\C# Project\Git C# Project\ExaminationSys\bin\Debug\EntityFramework.xml
+F:\ITI\C# Project\Git C# Project\ExaminationSys\bin\Debug\EntityFramework.SqlServer.xml
+F:\ITI\C# Project\Git C# Project\ExaminationSys\obj\Debug\ExaminationSys.csproj.AssemblyReference.cache
+F:\ITI\C# Project\Git C# Project\ExaminationSys\obj\Debug\ExaminationSys.csproj.SuggestedBindingRedirects.cache
+F:\ITI\C# Project\Git C# Project\ExaminationSys\obj\Debug\ExaminationSys.Form1.resources
+F:\ITI\C# Project\Git C# Project\ExaminationSys\obj\Debug\ExaminationSys.Login.resources
+F:\ITI\C# Project\Git C# Project\ExaminationSys\obj\Debug\ExaminationSys.Migrations.init.resources
+F:\ITI\C# Project\Git C# Project\ExaminationSys\obj\Debug\ExaminationSys.Migrations.update1.resources
+F:\ITI\C# Project\Git C# Project\ExaminationSys\obj\Debug\ExaminationSys.Migrations.update2.resources
+F:\ITI\C# Project\Git C# Project\ExaminationSys\obj\Debug\ExaminationSys.Migrations.update3.resources
+F:\ITI\C# Project\Git C# Project\ExaminationSys\obj\Debug\ExaminationSys.Properties.Resources.resources
+F:\ITI\C# Project\Git C# Project\ExaminationSys\obj\Debug\ExaminationSys.csproj.GenerateResource.cache
+F:\ITI\C# Project\Git C# Project\ExaminationSys\obj\Debug\ExaminationSys.csproj.CoreCompileInputs.cache
+F:\ITI\C# Project\Git C# Project\ExaminationSys\obj\Debug\ExaminationSys.csproj.CopyComplete
+F:\ITI\C# Project\Git C# Project\ExaminationSys\obj\Debug\ExaminationSys.exe
+F:\ITI\C# Project\Git C# Project\ExaminationSys\obj\Debug\ExaminationSys.pdb
+F:\ITI\C# Project\Git C# Project\ExaminationSys\bin\Debug\MetroFramework.Design.dll
+F:\ITI\C# Project\Git C# Project\ExaminationSys\bin\Debug\MetroFramework.dll
+F:\ITI\C# Project\Git C# Project\ExaminationSys\bin\Debug\MetroFramework.Fonts.dll
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\bin\Debug\ExaminationSys.exe.config
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\bin\Debug\ExaminationSys.exe
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\bin\Debug\ExaminationSys.pdb
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\bin\Debug\EntityFramework.dll
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\bin\Debug\EntityFramework.SqlServer.dll
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\bin\Debug\MetroFramework.Design.dll
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\bin\Debug\MetroFramework.dll
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\bin\Debug\MetroFramework.Fonts.dll
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\bin\Debug\MetroSet UI.dll
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\bin\Debug\EntityFramework.xml
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\bin\Debug\EntityFramework.SqlServer.xml
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\obj\Debug\ExaminationSys.csproj.AssemblyReference.cache
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\obj\Debug\ExaminationSys.csproj.SuggestedBindingRedirects.cache
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\obj\Debug\ExaminationSys.Form1.resources
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\obj\Debug\ExaminationSys.Login.resources
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\obj\Debug\ExaminationSys.Properties.Resources.resources
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\obj\Debug\ExaminationSys.csproj.GenerateResource.cache
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\obj\Debug\ExaminationSys.csproj.CoreCompileInputs.cache
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\obj\Debug\ExaminationSys.csproj.CopyComplete
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\obj\Debug\ExaminationSys.exe
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\obj\Debug\ExaminationSys.pdb
+F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\obj\Debug\ExaminationSys.Migrations.init.resources
