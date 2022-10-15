@@ -19,11 +19,11 @@ namespace ExaminationSys
         [Required, ForeignKey("Exam")]
         public int ExamId { get; set; }
         [ForeignKey("MCQuestion")]
-        public int MCQId { get; set; }
+        public int? MCQId { get; set; }
         [ForeignKey("TFQuestion")]
-        public int TFQId { get; set; }
+        public int? TFXQId { get; set; }
         [ForeignKey("TxtQuestion")]
-        public int TxtQId { get; set; }
+        public int? TXQId { get; set; }
         [Required, ForeignKey("Course")]
         public int CrsId { get; set; }
 

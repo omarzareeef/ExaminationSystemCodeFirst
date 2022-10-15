@@ -30,11 +30,32 @@
         {
             this.Tabs = new MetroSet_UI.Controls.MetroSetTabControl();
             this.Creat_Exam = new MetroSet_UI.Child.MetroSetSetTabPage();
+            this.panelManually = new MetroSet_UI.Controls.MetroSetPanel();
+            this.btnCrtManExam = new MetroSet_UI.Controls.MetroSetButton();
+            this.comboxManAvailCrsforIns = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.txtDegManTxtQ = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.txtDegManTFQ = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.lblDegQsts = new MetroSet_UI.Controls.MetroSetLabel();
+            this.txtDegManMCQ = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.txtIdsManTxtQ = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.txtIdsManTFQ = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.txtIdsManMCQ = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.lblTxtQIds = new MetroSet_UI.Controls.MetroSetLabel();
+            this.lblTFQIds = new MetroSet_UI.Controls.MetroSetLabel();
+            this.lblMCQIds = new MetroSet_UI.Controls.MetroSetLabel();
+            this.comboxInternet = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.comboxOpenBook = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.comboxCalc = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.lblInternet = new MetroSet_UI.Controls.MetroSetLabel();
+            this.lblOpenBook = new MetroSet_UI.Controls.MetroSetLabel();
+            this.lblCalc = new MetroSet_UI.Controls.MetroSetLabel();
+            this.lblAllowanceOpts = new MetroSet_UI.Controls.MetroSetLabel();
             this.lblCreationMethod = new MetroSet_UI.Controls.MetroSetLabel();
             this.lblEndTime = new MetroSet_UI.Controls.MetroSetLabel();
             this.lblExamType = new MetroSet_UI.Controls.MetroSetLabel();
             this.lblStartTime = new MetroSet_UI.Controls.MetroSetLabel();
             this.panelRandomly = new MetroSet_UI.Controls.MetroSetPanel();
+            this.btnCrtRandExam = new MetroSet_UI.Controls.MetroSetButton();
             this.txtDegMCQ = new MetroSet_UI.Controls.MetroSetRichTextBox();
             this.txtDegTxtQ = new MetroSet_UI.Controls.MetroSetRichTextBox();
             this.txtDegTFQ = new MetroSet_UI.Controls.MetroSetRichTextBox();
@@ -62,31 +83,14 @@
             this.Exams = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.btnLogOut = new MetroSet_UI.Controls.MetroSetDefaultButton();
             this.lblClose = new MetroSet_UI.Controls.MetroSetLabel();
-            this.btnCrtRandExam = new MetroSet_UI.Controls.MetroSetButton();
-            this.lblAllowanceOpts = new MetroSet_UI.Controls.MetroSetLabel();
-            this.lblCalc = new MetroSet_UI.Controls.MetroSetLabel();
-            this.lblOpenBook = new MetroSet_UI.Controls.MetroSetLabel();
-            this.lblInternet = new MetroSet_UI.Controls.MetroSetLabel();
-            this.comboxCalc = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.comboxOpenBook = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.comboxInternet = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.panelManually = new MetroSet_UI.Controls.MetroSetPanel();
-            this.lblMCQIds = new MetroSet_UI.Controls.MetroSetLabel();
-            this.lblTFQIds = new MetroSet_UI.Controls.MetroSetLabel();
-            this.lblTxtQIds = new MetroSet_UI.Controls.MetroSetLabel();
-            this.txtIdsManMCQ = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.txtIdsManTFQ = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.txtIdsManTxtQ = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.txtDegManMCQ = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.lblDegQsts = new MetroSet_UI.Controls.MetroSetLabel();
-            this.txtDegManTFQ = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.txtDegManTxtQ = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.comboxManAvailCrsforIns = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.btnCrtManExam = new MetroSet_UI.Controls.MetroSetButton();
+            this.comboxAssignStdNametoExam = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.comboxAssignCourseNametoExam = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.btnAssignStdtoExam = new MetroSet_UI.Controls.MetroSetButton();
             this.Tabs.SuspendLayout();
             this.Creat_Exam.SuspendLayout();
-            this.panelRandomly.SuspendLayout();
             this.panelManually.SuspendLayout();
+            this.panelRandomly.SuspendLayout();
+            this.Student_for_Exam.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tabs
@@ -95,13 +99,13 @@
             this.Tabs.AnimateTime = 200;
             this.Tabs.BackgroundColor = System.Drawing.Color.White;
             this.Tabs.Controls.Add(this.Creat_Exam);
+            this.Tabs.Controls.Add(this.Student_for_Exam);
             this.Tabs.Controls.Add(this.Instructor);
             this.Tabs.Controls.Add(this.Student);
             this.Tabs.Controls.Add(this.Department);
             this.Tabs.Controls.Add(this.Intake);
             this.Tabs.Controls.Add(this.Track);
             this.Tabs.Controls.Add(this.Branch);
-            this.Tabs.Controls.Add(this.Student_for_Exam);
             this.Tabs.Controls.Add(this.Question_Pools);
             this.Tabs.Controls.Add(this.Exams);
             this.Tabs.Cursor = System.Windows.Forms.Cursors.Default;
@@ -109,7 +113,7 @@
             this.Tabs.ItemSize = new System.Drawing.Size(100, 38);
             this.Tabs.Location = new System.Drawing.Point(15, 95);
             this.Tabs.Name = "Tabs";
-            this.Tabs.SelectedIndex = 0;
+            this.Tabs.SelectedIndex = 7;
             this.Tabs.SelectedTextColor = System.Drawing.Color.White;
             this.Tabs.Size = new System.Drawing.Size(997, 584);
             this.Tabs.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -156,6 +160,468 @@
             this.Creat_Exam.ThemeAuthor = "Narwin";
             this.Creat_Exam.ThemeName = "MetroLite";
             this.Creat_Exam.ToolTipText = null;
+            // 
+            // panelManually
+            // 
+            this.panelManually.BackgroundColor = System.Drawing.Color.White;
+            this.panelManually.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.panelManually.BorderThickness = 1;
+            this.panelManually.Controls.Add(this.btnCrtManExam);
+            this.panelManually.Controls.Add(this.comboxManAvailCrsforIns);
+            this.panelManually.Controls.Add(this.txtDegManTxtQ);
+            this.panelManually.Controls.Add(this.txtDegManTFQ);
+            this.panelManually.Controls.Add(this.lblDegQsts);
+            this.panelManually.Controls.Add(this.txtDegManMCQ);
+            this.panelManually.Controls.Add(this.txtIdsManTxtQ);
+            this.panelManually.Controls.Add(this.txtIdsManTFQ);
+            this.panelManually.Controls.Add(this.txtIdsManMCQ);
+            this.panelManually.Controls.Add(this.lblTxtQIds);
+            this.panelManually.Controls.Add(this.lblTFQIds);
+            this.panelManually.Controls.Add(this.lblMCQIds);
+            this.panelManually.IsDerivedStyle = true;
+            this.panelManually.Location = new System.Drawing.Point(157, 285);
+            this.panelManually.Name = "panelManually";
+            this.panelManually.Size = new System.Drawing.Size(660, 235);
+            this.panelManually.Style = MetroSet_UI.Enums.Style.Light;
+            this.panelManually.StyleManager = null;
+            this.panelManually.TabIndex = 25;
+            this.panelManually.ThemeAuthor = "Narwin";
+            this.panelManually.ThemeName = "MetroLite";
+            this.panelManually.Visible = false;
+            // 
+            // btnCrtManExam
+            // 
+            this.btnCrtManExam.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnCrtManExam.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnCrtManExam.DisabledForeColor = System.Drawing.Color.Gray;
+            this.btnCrtManExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnCrtManExam.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnCrtManExam.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnCrtManExam.HoverTextColor = System.Drawing.Color.White;
+            this.btnCrtManExam.IsDerivedStyle = true;
+            this.btnCrtManExam.Location = new System.Drawing.Point(516, 189);
+            this.btnCrtManExam.Name = "btnCrtManExam";
+            this.btnCrtManExam.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnCrtManExam.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnCrtManExam.NormalTextColor = System.Drawing.Color.White;
+            this.btnCrtManExam.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnCrtManExam.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnCrtManExam.PressTextColor = System.Drawing.Color.White;
+            this.btnCrtManExam.Size = new System.Drawing.Size(115, 33);
+            this.btnCrtManExam.Style = MetroSet_UI.Enums.Style.Light;
+            this.btnCrtManExam.StyleManager = null;
+            this.btnCrtManExam.TabIndex = 11;
+            this.btnCrtManExam.Text = "Create Exam";
+            this.btnCrtManExam.ThemeAuthor = "Narwin";
+            this.btnCrtManExam.ThemeName = "MetroLite";
+            this.btnCrtManExam.Click += new System.EventHandler(this.btnCrtManExam_Click);
+            // 
+            // comboxManAvailCrsforIns
+            // 
+            this.comboxManAvailCrsforIns.AllowDrop = true;
+            this.comboxManAvailCrsforIns.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.comboxManAvailCrsforIns.BackColor = System.Drawing.Color.Transparent;
+            this.comboxManAvailCrsforIns.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.comboxManAvailCrsforIns.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.comboxManAvailCrsforIns.CausesValidation = false;
+            this.comboxManAvailCrsforIns.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.comboxManAvailCrsforIns.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.comboxManAvailCrsforIns.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.comboxManAvailCrsforIns.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboxManAvailCrsforIns.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboxManAvailCrsforIns.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.comboxManAvailCrsforIns.FormattingEnabled = true;
+            this.comboxManAvailCrsforIns.IsDerivedStyle = true;
+            this.comboxManAvailCrsforIns.ItemHeight = 20;
+            this.comboxManAvailCrsforIns.Location = new System.Drawing.Point(166, 160);
+            this.comboxManAvailCrsforIns.Name = "comboxManAvailCrsforIns";
+            this.comboxManAvailCrsforIns.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.comboxManAvailCrsforIns.SelectedItemForeColor = System.Drawing.Color.White;
+            this.comboxManAvailCrsforIns.Size = new System.Drawing.Size(121, 26);
+            this.comboxManAvailCrsforIns.Style = MetroSet_UI.Enums.Style.Light;
+            this.comboxManAvailCrsforIns.StyleManager = null;
+            this.comboxManAvailCrsforIns.TabIndex = 10;
+            this.comboxManAvailCrsforIns.ThemeAuthor = "Narwin";
+            this.comboxManAvailCrsforIns.ThemeName = "MetroLite";
+            // 
+            // txtDegManTxtQ
+            // 
+            this.txtDegManTxtQ.AutoCompleteCustomSource = null;
+            this.txtDegManTxtQ.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtDegManTxtQ.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtDegManTxtQ.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtDegManTxtQ.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtDegManTxtQ.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtDegManTxtQ.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.txtDegManTxtQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtDegManTxtQ.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.txtDegManTxtQ.Image = null;
+            this.txtDegManTxtQ.IsDerivedStyle = true;
+            this.txtDegManTxtQ.Lines = null;
+            this.txtDegManTxtQ.Location = new System.Drawing.Point(516, 116);
+            this.txtDegManTxtQ.MaxLength = 32767;
+            this.txtDegManTxtQ.Multiline = false;
+            this.txtDegManTxtQ.Name = "txtDegManTxtQ";
+            this.txtDegManTxtQ.ReadOnly = false;
+            this.txtDegManTxtQ.Size = new System.Drawing.Size(66, 29);
+            this.txtDegManTxtQ.Style = MetroSet_UI.Enums.Style.Light;
+            this.txtDegManTxtQ.StyleManager = null;
+            this.txtDegManTxtQ.TabIndex = 9;
+            this.txtDegManTxtQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtDegManTxtQ.ThemeAuthor = "Narwin";
+            this.txtDegManTxtQ.ThemeName = "MetroLite";
+            this.txtDegManTxtQ.UseSystemPasswordChar = false;
+            this.txtDegManTxtQ.WatermarkText = "";
+            // 
+            // txtDegManTFQ
+            // 
+            this.txtDegManTFQ.AutoCompleteCustomSource = null;
+            this.txtDegManTFQ.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtDegManTFQ.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtDegManTFQ.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtDegManTFQ.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtDegManTFQ.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtDegManTFQ.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.txtDegManTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtDegManTFQ.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.txtDegManTFQ.Image = null;
+            this.txtDegManTFQ.IsDerivedStyle = true;
+            this.txtDegManTFQ.Lines = null;
+            this.txtDegManTFQ.Location = new System.Drawing.Point(516, 77);
+            this.txtDegManTFQ.MaxLength = 32767;
+            this.txtDegManTFQ.Multiline = false;
+            this.txtDegManTFQ.Name = "txtDegManTFQ";
+            this.txtDegManTFQ.ReadOnly = false;
+            this.txtDegManTFQ.Size = new System.Drawing.Size(66, 29);
+            this.txtDegManTFQ.Style = MetroSet_UI.Enums.Style.Light;
+            this.txtDegManTFQ.StyleManager = null;
+            this.txtDegManTFQ.TabIndex = 8;
+            this.txtDegManTFQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtDegManTFQ.ThemeAuthor = "Narwin";
+            this.txtDegManTFQ.ThemeName = "MetroLite";
+            this.txtDegManTFQ.UseSystemPasswordChar = false;
+            this.txtDegManTFQ.WatermarkText = "";
+            // 
+            // lblDegQsts
+            // 
+            this.lblDegQsts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblDegQsts.IsDerivedStyle = true;
+            this.lblDegQsts.Location = new System.Drawing.Point(516, 8);
+            this.lblDegQsts.Name = "lblDegQsts";
+            this.lblDegQsts.Size = new System.Drawing.Size(66, 29);
+            this.lblDegQsts.Style = MetroSet_UI.Enums.Style.Light;
+            this.lblDegQsts.StyleManager = null;
+            this.lblDegQsts.TabIndex = 7;
+            this.lblDegQsts.Text = "Degree";
+            this.lblDegQsts.ThemeAuthor = "Narwin";
+            this.lblDegQsts.ThemeName = "MetroLite";
+            // 
+            // txtDegManMCQ
+            // 
+            this.txtDegManMCQ.AutoCompleteCustomSource = null;
+            this.txtDegManMCQ.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtDegManMCQ.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtDegManMCQ.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtDegManMCQ.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtDegManMCQ.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtDegManMCQ.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.txtDegManMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtDegManMCQ.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.txtDegManMCQ.Image = null;
+            this.txtDegManMCQ.IsDerivedStyle = true;
+            this.txtDegManMCQ.Lines = null;
+            this.txtDegManMCQ.Location = new System.Drawing.Point(516, 40);
+            this.txtDegManMCQ.MaxLength = 32767;
+            this.txtDegManMCQ.Multiline = false;
+            this.txtDegManMCQ.Name = "txtDegManMCQ";
+            this.txtDegManMCQ.ReadOnly = false;
+            this.txtDegManMCQ.Size = new System.Drawing.Size(66, 29);
+            this.txtDegManMCQ.Style = MetroSet_UI.Enums.Style.Light;
+            this.txtDegManMCQ.StyleManager = null;
+            this.txtDegManMCQ.TabIndex = 6;
+            this.txtDegManMCQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtDegManMCQ.ThemeAuthor = "Narwin";
+            this.txtDegManMCQ.ThemeName = "MetroLite";
+            this.txtDegManMCQ.UseSystemPasswordChar = false;
+            this.txtDegManMCQ.WatermarkText = "";
+            // 
+            // txtIdsManTxtQ
+            // 
+            this.txtIdsManTxtQ.AutoCompleteCustomSource = null;
+            this.txtIdsManTxtQ.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtIdsManTxtQ.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtIdsManTxtQ.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtIdsManTxtQ.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtIdsManTxtQ.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtIdsManTxtQ.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.txtIdsManTxtQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtIdsManTxtQ.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.txtIdsManTxtQ.Image = null;
+            this.txtIdsManTxtQ.IsDerivedStyle = true;
+            this.txtIdsManTxtQ.Lines = null;
+            this.txtIdsManTxtQ.Location = new System.Drawing.Point(166, 116);
+            this.txtIdsManTxtQ.MaxLength = 32767;
+            this.txtIdsManTxtQ.Multiline = false;
+            this.txtIdsManTxtQ.Name = "txtIdsManTxtQ";
+            this.txtIdsManTxtQ.ReadOnly = false;
+            this.txtIdsManTxtQ.Size = new System.Drawing.Size(274, 29);
+            this.txtIdsManTxtQ.Style = MetroSet_UI.Enums.Style.Light;
+            this.txtIdsManTxtQ.StyleManager = null;
+            this.txtIdsManTxtQ.TabIndex = 5;
+            this.txtIdsManTxtQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtIdsManTxtQ.ThemeAuthor = "Narwin";
+            this.txtIdsManTxtQ.ThemeName = "MetroLite";
+            this.txtIdsManTxtQ.UseSystemPasswordChar = false;
+            this.txtIdsManTxtQ.WatermarkText = "";
+            // 
+            // txtIdsManTFQ
+            // 
+            this.txtIdsManTFQ.AutoCompleteCustomSource = null;
+            this.txtIdsManTFQ.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtIdsManTFQ.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtIdsManTFQ.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtIdsManTFQ.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtIdsManTFQ.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtIdsManTFQ.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.txtIdsManTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtIdsManTFQ.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.txtIdsManTFQ.Image = null;
+            this.txtIdsManTFQ.IsDerivedStyle = true;
+            this.txtIdsManTFQ.Lines = null;
+            this.txtIdsManTFQ.Location = new System.Drawing.Point(166, 77);
+            this.txtIdsManTFQ.MaxLength = 32767;
+            this.txtIdsManTFQ.Multiline = false;
+            this.txtIdsManTFQ.Name = "txtIdsManTFQ";
+            this.txtIdsManTFQ.ReadOnly = false;
+            this.txtIdsManTFQ.Size = new System.Drawing.Size(274, 29);
+            this.txtIdsManTFQ.Style = MetroSet_UI.Enums.Style.Light;
+            this.txtIdsManTFQ.StyleManager = null;
+            this.txtIdsManTFQ.TabIndex = 4;
+            this.txtIdsManTFQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtIdsManTFQ.ThemeAuthor = "Narwin";
+            this.txtIdsManTFQ.ThemeName = "MetroLite";
+            this.txtIdsManTFQ.UseSystemPasswordChar = false;
+            this.txtIdsManTFQ.WatermarkText = "";
+            // 
+            // txtIdsManMCQ
+            // 
+            this.txtIdsManMCQ.AutoCompleteCustomSource = null;
+            this.txtIdsManMCQ.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtIdsManMCQ.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtIdsManMCQ.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtIdsManMCQ.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtIdsManMCQ.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.txtIdsManMCQ.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.txtIdsManMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtIdsManMCQ.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.txtIdsManMCQ.Image = null;
+            this.txtIdsManMCQ.IsDerivedStyle = true;
+            this.txtIdsManMCQ.Lines = null;
+            this.txtIdsManMCQ.Location = new System.Drawing.Point(166, 40);
+            this.txtIdsManMCQ.MaxLength = 32767;
+            this.txtIdsManMCQ.Multiline = false;
+            this.txtIdsManMCQ.Name = "txtIdsManMCQ";
+            this.txtIdsManMCQ.ReadOnly = false;
+            this.txtIdsManMCQ.Size = new System.Drawing.Size(274, 29);
+            this.txtIdsManMCQ.Style = MetroSet_UI.Enums.Style.Light;
+            this.txtIdsManMCQ.StyleManager = null;
+            this.txtIdsManMCQ.TabIndex = 3;
+            this.txtIdsManMCQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtIdsManMCQ.ThemeAuthor = "Narwin";
+            this.txtIdsManMCQ.ThemeName = "MetroLite";
+            this.txtIdsManMCQ.UseSystemPasswordChar = false;
+            this.txtIdsManMCQ.WatermarkText = "";
+            // 
+            // lblTxtQIds
+            // 
+            this.lblTxtQIds.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblTxtQIds.IsDerivedStyle = true;
+            this.lblTxtQIds.Location = new System.Drawing.Point(38, 116);
+            this.lblTxtQIds.Name = "lblTxtQIds";
+            this.lblTxtQIds.Size = new System.Drawing.Size(87, 29);
+            this.lblTxtQIds.Style = MetroSet_UI.Enums.Style.Light;
+            this.lblTxtQIds.StyleManager = null;
+            this.lblTxtQIds.TabIndex = 2;
+            this.lblTxtQIds.Text = "TxtQ Ids";
+            this.lblTxtQIds.ThemeAuthor = "Narwin";
+            this.lblTxtQIds.ThemeName = "MetroLite";
+            // 
+            // lblTFQIds
+            // 
+            this.lblTFQIds.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblTFQIds.IsDerivedStyle = true;
+            this.lblTFQIds.Location = new System.Drawing.Point(38, 77);
+            this.lblTFQIds.Name = "lblTFQIds";
+            this.lblTFQIds.Size = new System.Drawing.Size(87, 29);
+            this.lblTFQIds.Style = MetroSet_UI.Enums.Style.Light;
+            this.lblTFQIds.StyleManager = null;
+            this.lblTFQIds.TabIndex = 1;
+            this.lblTFQIds.Text = "TFQ Ids";
+            this.lblTFQIds.ThemeAuthor = "Narwin";
+            this.lblTFQIds.ThemeName = "MetroLite";
+            // 
+            // lblMCQIds
+            // 
+            this.lblMCQIds.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblMCQIds.IsDerivedStyle = true;
+            this.lblMCQIds.Location = new System.Drawing.Point(38, 40);
+            this.lblMCQIds.Name = "lblMCQIds";
+            this.lblMCQIds.Size = new System.Drawing.Size(87, 29);
+            this.lblMCQIds.Style = MetroSet_UI.Enums.Style.Light;
+            this.lblMCQIds.StyleManager = null;
+            this.lblMCQIds.TabIndex = 0;
+            this.lblMCQIds.Text = "MCQ Ids";
+            this.lblMCQIds.ThemeAuthor = "Narwin";
+            this.lblMCQIds.ThemeName = "MetroLite";
+            // 
+            // comboxInternet
+            // 
+            this.comboxInternet.AllowDrop = true;
+            this.comboxInternet.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.comboxInternet.BackColor = System.Drawing.Color.Transparent;
+            this.comboxInternet.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.comboxInternet.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.comboxInternet.CausesValidation = false;
+            this.comboxInternet.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.comboxInternet.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.comboxInternet.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.comboxInternet.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboxInternet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboxInternet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.comboxInternet.FormattingEnabled = true;
+            this.comboxInternet.IsDerivedStyle = true;
+            this.comboxInternet.ItemHeight = 20;
+            this.comboxInternet.Items.AddRange(new object[] {
+            "Allowed",
+            "Not Allowed"});
+            this.comboxInternet.Location = new System.Drawing.Point(673, 244);
+            this.comboxInternet.Name = "comboxInternet";
+            this.comboxInternet.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.comboxInternet.SelectedItemForeColor = System.Drawing.Color.White;
+            this.comboxInternet.Size = new System.Drawing.Size(130, 26);
+            this.comboxInternet.Style = MetroSet_UI.Enums.Style.Light;
+            this.comboxInternet.StyleManager = null;
+            this.comboxInternet.TabIndex = 24;
+            this.comboxInternet.ThemeAuthor = "Narwin";
+            this.comboxInternet.ThemeName = "MetroLite";
+            // 
+            // comboxOpenBook
+            // 
+            this.comboxOpenBook.AllowDrop = true;
+            this.comboxOpenBook.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.comboxOpenBook.BackColor = System.Drawing.Color.Transparent;
+            this.comboxOpenBook.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.comboxOpenBook.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.comboxOpenBook.CausesValidation = false;
+            this.comboxOpenBook.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.comboxOpenBook.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.comboxOpenBook.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.comboxOpenBook.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboxOpenBook.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboxOpenBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.comboxOpenBook.FormattingEnabled = true;
+            this.comboxOpenBook.IsDerivedStyle = true;
+            this.comboxOpenBook.ItemHeight = 20;
+            this.comboxOpenBook.Items.AddRange(new object[] {
+            "Allowed",
+            "Not Allowed"});
+            this.comboxOpenBook.Location = new System.Drawing.Point(432, 244);
+            this.comboxOpenBook.Name = "comboxOpenBook";
+            this.comboxOpenBook.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.comboxOpenBook.SelectedItemForeColor = System.Drawing.Color.White;
+            this.comboxOpenBook.Size = new System.Drawing.Size(130, 26);
+            this.comboxOpenBook.Style = MetroSet_UI.Enums.Style.Light;
+            this.comboxOpenBook.StyleManager = null;
+            this.comboxOpenBook.TabIndex = 23;
+            this.comboxOpenBook.ThemeAuthor = "Narwin";
+            this.comboxOpenBook.ThemeName = "MetroLite";
+            // 
+            // comboxCalc
+            // 
+            this.comboxCalc.AllowDrop = true;
+            this.comboxCalc.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.comboxCalc.BackColor = System.Drawing.Color.Transparent;
+            this.comboxCalc.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.comboxCalc.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.comboxCalc.CausesValidation = false;
+            this.comboxCalc.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.comboxCalc.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.comboxCalc.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.comboxCalc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboxCalc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboxCalc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.comboxCalc.FormattingEnabled = true;
+            this.comboxCalc.IsDerivedStyle = true;
+            this.comboxCalc.ItemHeight = 20;
+            this.comboxCalc.Items.AddRange(new object[] {
+            "Allowed",
+            "Not Allowed"});
+            this.comboxCalc.Location = new System.Drawing.Point(195, 244);
+            this.comboxCalc.Name = "comboxCalc";
+            this.comboxCalc.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.comboxCalc.SelectedItemForeColor = System.Drawing.Color.White;
+            this.comboxCalc.Size = new System.Drawing.Size(130, 26);
+            this.comboxCalc.Style = MetroSet_UI.Enums.Style.Light;
+            this.comboxCalc.StyleManager = null;
+            this.comboxCalc.TabIndex = 22;
+            this.comboxCalc.ThemeAuthor = "Narwin";
+            this.comboxCalc.ThemeName = "MetroLite";
+            // 
+            // lblInternet
+            // 
+            this.lblInternet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblInternet.IsDerivedStyle = true;
+            this.lblInternet.Location = new System.Drawing.Point(673, 203);
+            this.lblInternet.Name = "lblInternet";
+            this.lblInternet.Size = new System.Drawing.Size(100, 23);
+            this.lblInternet.Style = MetroSet_UI.Enums.Style.Light;
+            this.lblInternet.StyleManager = null;
+            this.lblInternet.TabIndex = 21;
+            this.lblInternet.Text = "Internet";
+            this.lblInternet.ThemeAuthor = "Narwin";
+            this.lblInternet.ThemeName = "MetroLite";
+            // 
+            // lblOpenBook
+            // 
+            this.lblOpenBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblOpenBook.IsDerivedStyle = true;
+            this.lblOpenBook.Location = new System.Drawing.Point(432, 203);
+            this.lblOpenBook.Name = "lblOpenBook";
+            this.lblOpenBook.Size = new System.Drawing.Size(100, 23);
+            this.lblOpenBook.Style = MetroSet_UI.Enums.Style.Light;
+            this.lblOpenBook.StyleManager = null;
+            this.lblOpenBook.TabIndex = 19;
+            this.lblOpenBook.Text = "Open Book";
+            this.lblOpenBook.ThemeAuthor = "Narwin";
+            this.lblOpenBook.ThemeName = "MetroLite";
+            // 
+            // lblCalc
+            // 
+            this.lblCalc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblCalc.IsDerivedStyle = true;
+            this.lblCalc.Location = new System.Drawing.Point(195, 203);
+            this.lblCalc.Name = "lblCalc";
+            this.lblCalc.Size = new System.Drawing.Size(100, 23);
+            this.lblCalc.Style = MetroSet_UI.Enums.Style.Light;
+            this.lblCalc.StyleManager = null;
+            this.lblCalc.TabIndex = 17;
+            this.lblCalc.Text = "Calculator";
+            this.lblCalc.ThemeAuthor = "Narwin";
+            this.lblCalc.ThemeName = "MetroLite";
+            // 
+            // lblAllowanceOpts
+            // 
+            this.lblAllowanceOpts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblAllowanceOpts.IsDerivedStyle = true;
+            this.lblAllowanceOpts.Location = new System.Drawing.Point(157, 166);
+            this.lblAllowanceOpts.Name = "lblAllowanceOpts";
+            this.lblAllowanceOpts.Size = new System.Drawing.Size(162, 23);
+            this.lblAllowanceOpts.Style = MetroSet_UI.Enums.Style.Light;
+            this.lblAllowanceOpts.StyleManager = null;
+            this.lblAllowanceOpts.TabIndex = 13;
+            this.lblAllowanceOpts.Text = "Allowance Options";
+            this.lblAllowanceOpts.ThemeAuthor = "Narwin";
+            this.lblAllowanceOpts.ThemeName = "MetroLite";
             // 
             // lblCreationMethod
             // 
@@ -216,7 +682,7 @@
             // panelRandomly
             // 
             this.panelRandomly.BackgroundColor = System.Drawing.Color.White;
-            this.panelRandomly.BorderColor = System.Drawing.Color.Transparent;
+            this.panelRandomly.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.panelRandomly.BorderThickness = 0;
             this.panelRandomly.Controls.Add(this.btnCrtRandExam);
             this.panelRandomly.Controls.Add(this.txtDegMCQ);
@@ -241,6 +707,33 @@
             this.panelRandomly.ThemeAuthor = "Narwin";
             this.panelRandomly.ThemeName = "MetroLite";
             this.panelRandomly.Visible = false;
+            // 
+            // btnCrtRandExam
+            // 
+            this.btnCrtRandExam.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnCrtRandExam.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnCrtRandExam.DisabledForeColor = System.Drawing.Color.Gray;
+            this.btnCrtRandExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnCrtRandExam.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnCrtRandExam.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnCrtRandExam.HoverTextColor = System.Drawing.Color.White;
+            this.btnCrtRandExam.IsDerivedStyle = true;
+            this.btnCrtRandExam.Location = new System.Drawing.Point(494, 199);
+            this.btnCrtRandExam.Name = "btnCrtRandExam";
+            this.btnCrtRandExam.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnCrtRandExam.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnCrtRandExam.NormalTextColor = System.Drawing.Color.White;
+            this.btnCrtRandExam.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnCrtRandExam.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnCrtRandExam.PressTextColor = System.Drawing.Color.White;
+            this.btnCrtRandExam.Size = new System.Drawing.Size(121, 23);
+            this.btnCrtRandExam.Style = MetroSet_UI.Enums.Style.Light;
+            this.btnCrtRandExam.StyleManager = null;
+            this.btnCrtRandExam.TabIndex = 18;
+            this.btnCrtRandExam.Text = "Create Exam";
+            this.btnCrtRandExam.ThemeAuthor = "Narwin";
+            this.btnCrtRandExam.ThemeName = "MetroLite";
+            this.btnCrtRandExam.Click += new System.EventHandler(this.btnCrtExam_Click);
             // 
             // txtDegMCQ
             // 
@@ -564,7 +1057,7 @@
             this.Instructor.IsDerivedStyle = true;
             this.Instructor.Location = new System.Drawing.Point(4, 42);
             this.Instructor.Name = "Instructor";
-            this.Instructor.Size = new System.Drawing.Size(989, 678);
+            this.Instructor.Size = new System.Drawing.Size(989, 538);
             this.Instructor.Style = MetroSet_UI.Enums.Style.Light;
             this.Instructor.StyleManager = null;
             this.Instructor.TabIndex = 0;
@@ -582,7 +1075,7 @@
             this.Student.IsDerivedStyle = true;
             this.Student.Location = new System.Drawing.Point(4, 42);
             this.Student.Name = "Student";
-            this.Student.Size = new System.Drawing.Size(989, 678);
+            this.Student.Size = new System.Drawing.Size(989, 538);
             this.Student.Style = MetroSet_UI.Enums.Style.Light;
             this.Student.StyleManager = null;
             this.Student.TabIndex = 1;
@@ -600,7 +1093,7 @@
             this.Department.IsDerivedStyle = true;
             this.Department.Location = new System.Drawing.Point(4, 42);
             this.Department.Name = "Department";
-            this.Department.Size = new System.Drawing.Size(989, 678);
+            this.Department.Size = new System.Drawing.Size(989, 538);
             this.Department.Style = MetroSet_UI.Enums.Style.Light;
             this.Department.StyleManager = null;
             this.Department.TabIndex = 2;
@@ -618,7 +1111,7 @@
             this.Intake.IsDerivedStyle = true;
             this.Intake.Location = new System.Drawing.Point(4, 42);
             this.Intake.Name = "Intake";
-            this.Intake.Size = new System.Drawing.Size(989, 678);
+            this.Intake.Size = new System.Drawing.Size(989, 538);
             this.Intake.Style = MetroSet_UI.Enums.Style.Light;
             this.Intake.StyleManager = null;
             this.Intake.TabIndex = 3;
@@ -636,7 +1129,7 @@
             this.Track.IsDerivedStyle = true;
             this.Track.Location = new System.Drawing.Point(4, 42);
             this.Track.Name = "Track";
-            this.Track.Size = new System.Drawing.Size(989, 678);
+            this.Track.Size = new System.Drawing.Size(989, 538);
             this.Track.Style = MetroSet_UI.Enums.Style.Light;
             this.Track.StyleManager = null;
             this.Track.TabIndex = 4;
@@ -654,7 +1147,7 @@
             this.Branch.IsDerivedStyle = true;
             this.Branch.Location = new System.Drawing.Point(4, 42);
             this.Branch.Name = "Branch";
-            this.Branch.Size = new System.Drawing.Size(989, 678);
+            this.Branch.Size = new System.Drawing.Size(989, 538);
             this.Branch.Style = MetroSet_UI.Enums.Style.Light;
             this.Branch.StyleManager = null;
             this.Branch.TabIndex = 5;
@@ -666,13 +1159,16 @@
             // Student_for_Exam
             // 
             this.Student_for_Exam.BaseColor = System.Drawing.Color.White;
+            this.Student_for_Exam.Controls.Add(this.btnAssignStdtoExam);
+            this.Student_for_Exam.Controls.Add(this.comboxAssignCourseNametoExam);
+            this.Student_for_Exam.Controls.Add(this.comboxAssignStdNametoExam);
             this.Student_for_Exam.Font = null;
             this.Student_for_Exam.ImageIndex = 0;
             this.Student_for_Exam.ImageKey = null;
             this.Student_for_Exam.IsDerivedStyle = true;
             this.Student_for_Exam.Location = new System.Drawing.Point(4, 42);
             this.Student_for_Exam.Name = "Student_for_Exam";
-            this.Student_for_Exam.Size = new System.Drawing.Size(989, 678);
+            this.Student_for_Exam.Size = new System.Drawing.Size(989, 538);
             this.Student_for_Exam.Style = MetroSet_UI.Enums.Style.Light;
             this.Student_for_Exam.StyleManager = null;
             this.Student_for_Exam.TabIndex = 7;
@@ -690,7 +1186,7 @@
             this.Question_Pools.IsDerivedStyle = true;
             this.Question_Pools.Location = new System.Drawing.Point(4, 42);
             this.Question_Pools.Name = "Question_Pools";
-            this.Question_Pools.Size = new System.Drawing.Size(989, 678);
+            this.Question_Pools.Size = new System.Drawing.Size(989, 538);
             this.Question_Pools.Style = MetroSet_UI.Enums.Style.Light;
             this.Question_Pools.StyleManager = null;
             this.Question_Pools.TabIndex = 8;
@@ -708,7 +1204,7 @@
             this.Exams.IsDerivedStyle = true;
             this.Exams.Location = new System.Drawing.Point(4, 42);
             this.Exams.Name = "Exams";
-            this.Exams.Size = new System.Drawing.Size(989, 678);
+            this.Exams.Size = new System.Drawing.Size(989, 538);
             this.Exams.Style = MetroSet_UI.Enums.Style.Light;
             this.Exams.StyleManager = null;
             this.Exams.TabIndex = 9;
@@ -759,494 +1255,88 @@
             this.lblClose.ThemeName = "MetroLite";
             this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
             // 
-            // btnCrtRandExam
+            // comboxAssignStdNametoExam
             // 
-            this.btnCrtRandExam.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnCrtRandExam.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnCrtRandExam.DisabledForeColor = System.Drawing.Color.Gray;
-            this.btnCrtRandExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnCrtRandExam.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.btnCrtRandExam.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.btnCrtRandExam.HoverTextColor = System.Drawing.Color.White;
-            this.btnCrtRandExam.IsDerivedStyle = true;
-            this.btnCrtRandExam.Location = new System.Drawing.Point(494, 199);
-            this.btnCrtRandExam.Name = "btnCrtRandExam";
-            this.btnCrtRandExam.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnCrtRandExam.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnCrtRandExam.NormalTextColor = System.Drawing.Color.White;
-            this.btnCrtRandExam.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.btnCrtRandExam.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.btnCrtRandExam.PressTextColor = System.Drawing.Color.White;
-            this.btnCrtRandExam.Size = new System.Drawing.Size(121, 23);
-            this.btnCrtRandExam.Style = MetroSet_UI.Enums.Style.Light;
-            this.btnCrtRandExam.StyleManager = null;
-            this.btnCrtRandExam.TabIndex = 18;
-            this.btnCrtRandExam.Text = "Create Exam";
-            this.btnCrtRandExam.ThemeAuthor = "Narwin";
-            this.btnCrtRandExam.ThemeName = "MetroLite";
-            this.btnCrtRandExam.Click += new System.EventHandler(this.btnCrtExam_Click);
+            this.comboxAssignStdNametoExam.AllowDrop = true;
+            this.comboxAssignStdNametoExam.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.comboxAssignStdNametoExam.BackColor = System.Drawing.Color.Transparent;
+            this.comboxAssignStdNametoExam.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.comboxAssignStdNametoExam.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.comboxAssignStdNametoExam.CausesValidation = false;
+            this.comboxAssignStdNametoExam.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.comboxAssignStdNametoExam.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.comboxAssignStdNametoExam.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.comboxAssignStdNametoExam.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboxAssignStdNametoExam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboxAssignStdNametoExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.comboxAssignStdNametoExam.FormattingEnabled = true;
+            this.comboxAssignStdNametoExam.IsDerivedStyle = true;
+            this.comboxAssignStdNametoExam.ItemHeight = 20;
+            this.comboxAssignStdNametoExam.Location = new System.Drawing.Point(326, 32);
+            this.comboxAssignStdNametoExam.Name = "comboxAssignStdNametoExam";
+            this.comboxAssignStdNametoExam.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.comboxAssignStdNametoExam.SelectedItemForeColor = System.Drawing.Color.White;
+            this.comboxAssignStdNametoExam.Size = new System.Drawing.Size(121, 26);
+            this.comboxAssignStdNametoExam.Style = MetroSet_UI.Enums.Style.Light;
+            this.comboxAssignStdNametoExam.StyleManager = null;
+            this.comboxAssignStdNametoExam.TabIndex = 0;
+            this.comboxAssignStdNametoExam.ThemeAuthor = "Narwin";
+            this.comboxAssignStdNametoExam.ThemeName = "MetroLite";
             // 
-            // lblAllowanceOpts
+            // comboxAssignCourseNametoExam
             // 
-            this.lblAllowanceOpts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblAllowanceOpts.IsDerivedStyle = true;
-            this.lblAllowanceOpts.Location = new System.Drawing.Point(157, 166);
-            this.lblAllowanceOpts.Name = "lblAllowanceOpts";
-            this.lblAllowanceOpts.Size = new System.Drawing.Size(162, 23);
-            this.lblAllowanceOpts.Style = MetroSet_UI.Enums.Style.Light;
-            this.lblAllowanceOpts.StyleManager = null;
-            this.lblAllowanceOpts.TabIndex = 13;
-            this.lblAllowanceOpts.Text = "Allowance Options";
-            this.lblAllowanceOpts.ThemeAuthor = "Narwin";
-            this.lblAllowanceOpts.ThemeName = "MetroLite";
+            this.comboxAssignCourseNametoExam.AllowDrop = true;
+            this.comboxAssignCourseNametoExam.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.comboxAssignCourseNametoExam.BackColor = System.Drawing.Color.Transparent;
+            this.comboxAssignCourseNametoExam.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.comboxAssignCourseNametoExam.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.comboxAssignCourseNametoExam.CausesValidation = false;
+            this.comboxAssignCourseNametoExam.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.comboxAssignCourseNametoExam.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.comboxAssignCourseNametoExam.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.comboxAssignCourseNametoExam.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboxAssignCourseNametoExam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboxAssignCourseNametoExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.comboxAssignCourseNametoExam.FormattingEnabled = true;
+            this.comboxAssignCourseNametoExam.IsDerivedStyle = true;
+            this.comboxAssignCourseNametoExam.ItemHeight = 20;
+            this.comboxAssignCourseNametoExam.Location = new System.Drawing.Point(83, 32);
+            this.comboxAssignCourseNametoExam.Name = "comboxAssignCourseNametoExam";
+            this.comboxAssignCourseNametoExam.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.comboxAssignCourseNametoExam.SelectedItemForeColor = System.Drawing.Color.White;
+            this.comboxAssignCourseNametoExam.Size = new System.Drawing.Size(121, 26);
+            this.comboxAssignCourseNametoExam.Style = MetroSet_UI.Enums.Style.Light;
+            this.comboxAssignCourseNametoExam.StyleManager = null;
+            this.comboxAssignCourseNametoExam.TabIndex = 1;
+            this.comboxAssignCourseNametoExam.ThemeAuthor = "Narwin";
+            this.comboxAssignCourseNametoExam.ThemeName = "MetroLite";
             // 
-            // lblCalc
+            // btnAssignStdtoExam
             // 
-            this.lblCalc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblCalc.IsDerivedStyle = true;
-            this.lblCalc.Location = new System.Drawing.Point(195, 203);
-            this.lblCalc.Name = "lblCalc";
-            this.lblCalc.Size = new System.Drawing.Size(100, 23);
-            this.lblCalc.Style = MetroSet_UI.Enums.Style.Light;
-            this.lblCalc.StyleManager = null;
-            this.lblCalc.TabIndex = 17;
-            this.lblCalc.Text = "Calculator";
-            this.lblCalc.ThemeAuthor = "Narwin";
-            this.lblCalc.ThemeName = "MetroLite";
-            // 
-            // lblOpenBook
-            // 
-            this.lblOpenBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblOpenBook.IsDerivedStyle = true;
-            this.lblOpenBook.Location = new System.Drawing.Point(432, 203);
-            this.lblOpenBook.Name = "lblOpenBook";
-            this.lblOpenBook.Size = new System.Drawing.Size(100, 23);
-            this.lblOpenBook.Style = MetroSet_UI.Enums.Style.Light;
-            this.lblOpenBook.StyleManager = null;
-            this.lblOpenBook.TabIndex = 19;
-            this.lblOpenBook.Text = "Open Book";
-            this.lblOpenBook.ThemeAuthor = "Narwin";
-            this.lblOpenBook.ThemeName = "MetroLite";
-            // 
-            // lblInternet
-            // 
-            this.lblInternet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblInternet.IsDerivedStyle = true;
-            this.lblInternet.Location = new System.Drawing.Point(673, 203);
-            this.lblInternet.Name = "lblInternet";
-            this.lblInternet.Size = new System.Drawing.Size(100, 23);
-            this.lblInternet.Style = MetroSet_UI.Enums.Style.Light;
-            this.lblInternet.StyleManager = null;
-            this.lblInternet.TabIndex = 21;
-            this.lblInternet.Text = "Internet";
-            this.lblInternet.ThemeAuthor = "Narwin";
-            this.lblInternet.ThemeName = "MetroLite";
-            // 
-            // comboxCalc
-            // 
-            this.comboxCalc.AllowDrop = true;
-            this.comboxCalc.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.comboxCalc.BackColor = System.Drawing.Color.Transparent;
-            this.comboxCalc.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.comboxCalc.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.comboxCalc.CausesValidation = false;
-            this.comboxCalc.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.comboxCalc.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.comboxCalc.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.comboxCalc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboxCalc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboxCalc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.comboxCalc.FormattingEnabled = true;
-            this.comboxCalc.IsDerivedStyle = true;
-            this.comboxCalc.ItemHeight = 20;
-            this.comboxCalc.Items.AddRange(new object[] {
-            "Allowed",
-            "Not Allowed"});
-            this.comboxCalc.Location = new System.Drawing.Point(195, 244);
-            this.comboxCalc.Name = "comboxCalc";
-            this.comboxCalc.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.comboxCalc.SelectedItemForeColor = System.Drawing.Color.White;
-            this.comboxCalc.Size = new System.Drawing.Size(130, 26);
-            this.comboxCalc.Style = MetroSet_UI.Enums.Style.Light;
-            this.comboxCalc.StyleManager = null;
-            this.comboxCalc.TabIndex = 22;
-            this.comboxCalc.ThemeAuthor = "Narwin";
-            this.comboxCalc.ThemeName = "MetroLite";
-            // 
-            // comboxOpenBook
-            // 
-            this.comboxOpenBook.AllowDrop = true;
-            this.comboxOpenBook.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.comboxOpenBook.BackColor = System.Drawing.Color.Transparent;
-            this.comboxOpenBook.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.comboxOpenBook.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.comboxOpenBook.CausesValidation = false;
-            this.comboxOpenBook.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.comboxOpenBook.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.comboxOpenBook.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.comboxOpenBook.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboxOpenBook.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboxOpenBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.comboxOpenBook.FormattingEnabled = true;
-            this.comboxOpenBook.IsDerivedStyle = true;
-            this.comboxOpenBook.ItemHeight = 20;
-            this.comboxOpenBook.Items.AddRange(new object[] {
-            "Allowed",
-            "Not Allowed"});
-            this.comboxOpenBook.Location = new System.Drawing.Point(432, 244);
-            this.comboxOpenBook.Name = "comboxOpenBook";
-            this.comboxOpenBook.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.comboxOpenBook.SelectedItemForeColor = System.Drawing.Color.White;
-            this.comboxOpenBook.Size = new System.Drawing.Size(130, 26);
-            this.comboxOpenBook.Style = MetroSet_UI.Enums.Style.Light;
-            this.comboxOpenBook.StyleManager = null;
-            this.comboxOpenBook.TabIndex = 23;
-            this.comboxOpenBook.ThemeAuthor = "Narwin";
-            this.comboxOpenBook.ThemeName = "MetroLite";
-            // 
-            // comboxInternet
-            // 
-            this.comboxInternet.AllowDrop = true;
-            this.comboxInternet.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.comboxInternet.BackColor = System.Drawing.Color.Transparent;
-            this.comboxInternet.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.comboxInternet.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.comboxInternet.CausesValidation = false;
-            this.comboxInternet.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.comboxInternet.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.comboxInternet.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.comboxInternet.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboxInternet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboxInternet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.comboxInternet.FormattingEnabled = true;
-            this.comboxInternet.IsDerivedStyle = true;
-            this.comboxInternet.ItemHeight = 20;
-            this.comboxInternet.Items.AddRange(new object[] {
-            "Allowed",
-            "Not Allowed"});
-            this.comboxInternet.Location = new System.Drawing.Point(673, 244);
-            this.comboxInternet.Name = "comboxInternet";
-            this.comboxInternet.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.comboxInternet.SelectedItemForeColor = System.Drawing.Color.White;
-            this.comboxInternet.Size = new System.Drawing.Size(130, 26);
-            this.comboxInternet.Style = MetroSet_UI.Enums.Style.Light;
-            this.comboxInternet.StyleManager = null;
-            this.comboxInternet.TabIndex = 24;
-            this.comboxInternet.ThemeAuthor = "Narwin";
-            this.comboxInternet.ThemeName = "MetroLite";
-            // 
-            // panelManually
-            // 
-            this.panelManually.BackgroundColor = System.Drawing.Color.White;
-            this.panelManually.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.panelManually.BorderThickness = 1;
-            this.panelManually.Controls.Add(this.btnCrtManExam);
-            this.panelManually.Controls.Add(this.comboxManAvailCrsforIns);
-            this.panelManually.Controls.Add(this.txtDegManTxtQ);
-            this.panelManually.Controls.Add(this.txtDegManTFQ);
-            this.panelManually.Controls.Add(this.lblDegQsts);
-            this.panelManually.Controls.Add(this.txtDegManMCQ);
-            this.panelManually.Controls.Add(this.txtIdsManTxtQ);
-            this.panelManually.Controls.Add(this.txtIdsManTFQ);
-            this.panelManually.Controls.Add(this.txtIdsManMCQ);
-            this.panelManually.Controls.Add(this.lblTxtQIds);
-            this.panelManually.Controls.Add(this.lblTFQIds);
-            this.panelManually.Controls.Add(this.lblMCQIds);
-            this.panelManually.IsDerivedStyle = true;
-            this.panelManually.Location = new System.Drawing.Point(157, 285);
-            this.panelManually.Name = "panelManually";
-            this.panelManually.Size = new System.Drawing.Size(660, 235);
-            this.panelManually.Style = MetroSet_UI.Enums.Style.Light;
-            this.panelManually.StyleManager = null;
-            this.panelManually.TabIndex = 25;
-            this.panelManually.ThemeAuthor = "Narwin";
-            this.panelManually.ThemeName = "MetroLite";
-            this.panelManually.Visible = false;
-            // 
-            // lblMCQIds
-            // 
-            this.lblMCQIds.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblMCQIds.IsDerivedStyle = true;
-            this.lblMCQIds.Location = new System.Drawing.Point(38, 40);
-            this.lblMCQIds.Name = "lblMCQIds";
-            this.lblMCQIds.Size = new System.Drawing.Size(87, 29);
-            this.lblMCQIds.Style = MetroSet_UI.Enums.Style.Light;
-            this.lblMCQIds.StyleManager = null;
-            this.lblMCQIds.TabIndex = 0;
-            this.lblMCQIds.Text = "MCQ Ids";
-            this.lblMCQIds.ThemeAuthor = "Narwin";
-            this.lblMCQIds.ThemeName = "MetroLite";
-            // 
-            // lblTFQIds
-            // 
-            this.lblTFQIds.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblTFQIds.IsDerivedStyle = true;
-            this.lblTFQIds.Location = new System.Drawing.Point(38, 77);
-            this.lblTFQIds.Name = "lblTFQIds";
-            this.lblTFQIds.Size = new System.Drawing.Size(87, 29);
-            this.lblTFQIds.Style = MetroSet_UI.Enums.Style.Light;
-            this.lblTFQIds.StyleManager = null;
-            this.lblTFQIds.TabIndex = 1;
-            this.lblTFQIds.Text = "TFQ Ids";
-            this.lblTFQIds.ThemeAuthor = "Narwin";
-            this.lblTFQIds.ThemeName = "MetroLite";
-            // 
-            // lblTxtQIds
-            // 
-            this.lblTxtQIds.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblTxtQIds.IsDerivedStyle = true;
-            this.lblTxtQIds.Location = new System.Drawing.Point(38, 116);
-            this.lblTxtQIds.Name = "lblTxtQIds";
-            this.lblTxtQIds.Size = new System.Drawing.Size(87, 29);
-            this.lblTxtQIds.Style = MetroSet_UI.Enums.Style.Light;
-            this.lblTxtQIds.StyleManager = null;
-            this.lblTxtQIds.TabIndex = 2;
-            this.lblTxtQIds.Text = "TxtQ Ids";
-            this.lblTxtQIds.ThemeAuthor = "Narwin";
-            this.lblTxtQIds.ThemeName = "MetroLite";
-            // 
-            // txtIdsManMCQ
-            // 
-            this.txtIdsManMCQ.AutoCompleteCustomSource = null;
-            this.txtIdsManMCQ.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtIdsManMCQ.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtIdsManMCQ.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.txtIdsManMCQ.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtIdsManMCQ.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.txtIdsManMCQ.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.txtIdsManMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtIdsManMCQ.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.txtIdsManMCQ.Image = null;
-            this.txtIdsManMCQ.IsDerivedStyle = true;
-            this.txtIdsManMCQ.Lines = null;
-            this.txtIdsManMCQ.Location = new System.Drawing.Point(166, 40);
-            this.txtIdsManMCQ.MaxLength = 32767;
-            this.txtIdsManMCQ.Multiline = false;
-            this.txtIdsManMCQ.Name = "txtIdsManMCQ";
-            this.txtIdsManMCQ.ReadOnly = false;
-            this.txtIdsManMCQ.Size = new System.Drawing.Size(274, 29);
-            this.txtIdsManMCQ.Style = MetroSet_UI.Enums.Style.Light;
-            this.txtIdsManMCQ.StyleManager = null;
-            this.txtIdsManMCQ.TabIndex = 3;
-            this.txtIdsManMCQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtIdsManMCQ.ThemeAuthor = "Narwin";
-            this.txtIdsManMCQ.ThemeName = "MetroLite";
-            this.txtIdsManMCQ.UseSystemPasswordChar = false;
-            this.txtIdsManMCQ.WatermarkText = "";
-            // 
-            // txtIdsManTFQ
-            // 
-            this.txtIdsManTFQ.AutoCompleteCustomSource = null;
-            this.txtIdsManTFQ.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtIdsManTFQ.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtIdsManTFQ.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.txtIdsManTFQ.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtIdsManTFQ.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.txtIdsManTFQ.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.txtIdsManTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtIdsManTFQ.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.txtIdsManTFQ.Image = null;
-            this.txtIdsManTFQ.IsDerivedStyle = true;
-            this.txtIdsManTFQ.Lines = null;
-            this.txtIdsManTFQ.Location = new System.Drawing.Point(166, 77);
-            this.txtIdsManTFQ.MaxLength = 32767;
-            this.txtIdsManTFQ.Multiline = false;
-            this.txtIdsManTFQ.Name = "txtIdsManTFQ";
-            this.txtIdsManTFQ.ReadOnly = false;
-            this.txtIdsManTFQ.Size = new System.Drawing.Size(274, 29);
-            this.txtIdsManTFQ.Style = MetroSet_UI.Enums.Style.Light;
-            this.txtIdsManTFQ.StyleManager = null;
-            this.txtIdsManTFQ.TabIndex = 4;
-            this.txtIdsManTFQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtIdsManTFQ.ThemeAuthor = "Narwin";
-            this.txtIdsManTFQ.ThemeName = "MetroLite";
-            this.txtIdsManTFQ.UseSystemPasswordChar = false;
-            this.txtIdsManTFQ.WatermarkText = "";
-            // 
-            // txtIdsManTxtQ
-            // 
-            this.txtIdsManTxtQ.AutoCompleteCustomSource = null;
-            this.txtIdsManTxtQ.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtIdsManTxtQ.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtIdsManTxtQ.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.txtIdsManTxtQ.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtIdsManTxtQ.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.txtIdsManTxtQ.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.txtIdsManTxtQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtIdsManTxtQ.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.txtIdsManTxtQ.Image = null;
-            this.txtIdsManTxtQ.IsDerivedStyle = true;
-            this.txtIdsManTxtQ.Lines = null;
-            this.txtIdsManTxtQ.Location = new System.Drawing.Point(166, 116);
-            this.txtIdsManTxtQ.MaxLength = 32767;
-            this.txtIdsManTxtQ.Multiline = false;
-            this.txtIdsManTxtQ.Name = "txtIdsManTxtQ";
-            this.txtIdsManTxtQ.ReadOnly = false;
-            this.txtIdsManTxtQ.Size = new System.Drawing.Size(274, 29);
-            this.txtIdsManTxtQ.Style = MetroSet_UI.Enums.Style.Light;
-            this.txtIdsManTxtQ.StyleManager = null;
-            this.txtIdsManTxtQ.TabIndex = 5;
-            this.txtIdsManTxtQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtIdsManTxtQ.ThemeAuthor = "Narwin";
-            this.txtIdsManTxtQ.ThemeName = "MetroLite";
-            this.txtIdsManTxtQ.UseSystemPasswordChar = false;
-            this.txtIdsManTxtQ.WatermarkText = "";
-            // 
-            // txtDegManMCQ
-            // 
-            this.txtDegManMCQ.AutoCompleteCustomSource = null;
-            this.txtDegManMCQ.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtDegManMCQ.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtDegManMCQ.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.txtDegManMCQ.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtDegManMCQ.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.txtDegManMCQ.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.txtDegManMCQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtDegManMCQ.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.txtDegManMCQ.Image = null;
-            this.txtDegManMCQ.IsDerivedStyle = true;
-            this.txtDegManMCQ.Lines = null;
-            this.txtDegManMCQ.Location = new System.Drawing.Point(516, 40);
-            this.txtDegManMCQ.MaxLength = 32767;
-            this.txtDegManMCQ.Multiline = false;
-            this.txtDegManMCQ.Name = "txtDegManMCQ";
-            this.txtDegManMCQ.ReadOnly = false;
-            this.txtDegManMCQ.Size = new System.Drawing.Size(66, 29);
-            this.txtDegManMCQ.Style = MetroSet_UI.Enums.Style.Light;
-            this.txtDegManMCQ.StyleManager = null;
-            this.txtDegManMCQ.TabIndex = 6;
-            this.txtDegManMCQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtDegManMCQ.ThemeAuthor = "Narwin";
-            this.txtDegManMCQ.ThemeName = "MetroLite";
-            this.txtDegManMCQ.UseSystemPasswordChar = false;
-            this.txtDegManMCQ.WatermarkText = "";
-            // 
-            // lblDegQsts
-            // 
-            this.lblDegQsts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblDegQsts.IsDerivedStyle = true;
-            this.lblDegQsts.Location = new System.Drawing.Point(516, 8);
-            this.lblDegQsts.Name = "lblDegQsts";
-            this.lblDegQsts.Size = new System.Drawing.Size(66, 29);
-            this.lblDegQsts.Style = MetroSet_UI.Enums.Style.Light;
-            this.lblDegQsts.StyleManager = null;
-            this.lblDegQsts.TabIndex = 7;
-            this.lblDegQsts.Text = "Degree";
-            this.lblDegQsts.ThemeAuthor = "Narwin";
-            this.lblDegQsts.ThemeName = "MetroLite";
-            // 
-            // txtDegManTFQ
-            // 
-            this.txtDegManTFQ.AutoCompleteCustomSource = null;
-            this.txtDegManTFQ.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtDegManTFQ.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtDegManTFQ.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.txtDegManTFQ.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtDegManTFQ.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.txtDegManTFQ.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.txtDegManTFQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtDegManTFQ.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.txtDegManTFQ.Image = null;
-            this.txtDegManTFQ.IsDerivedStyle = true;
-            this.txtDegManTFQ.Lines = null;
-            this.txtDegManTFQ.Location = new System.Drawing.Point(516, 77);
-            this.txtDegManTFQ.MaxLength = 32767;
-            this.txtDegManTFQ.Multiline = false;
-            this.txtDegManTFQ.Name = "txtDegManTFQ";
-            this.txtDegManTFQ.ReadOnly = false;
-            this.txtDegManTFQ.Size = new System.Drawing.Size(66, 29);
-            this.txtDegManTFQ.Style = MetroSet_UI.Enums.Style.Light;
-            this.txtDegManTFQ.StyleManager = null;
-            this.txtDegManTFQ.TabIndex = 8;
-            this.txtDegManTFQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtDegManTFQ.ThemeAuthor = "Narwin";
-            this.txtDegManTFQ.ThemeName = "MetroLite";
-            this.txtDegManTFQ.UseSystemPasswordChar = false;
-            this.txtDegManTFQ.WatermarkText = "";
-            // 
-            // txtDegManTxtQ
-            // 
-            this.txtDegManTxtQ.AutoCompleteCustomSource = null;
-            this.txtDegManTxtQ.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtDegManTxtQ.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtDegManTxtQ.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.txtDegManTxtQ.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtDegManTxtQ.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.txtDegManTxtQ.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.txtDegManTxtQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtDegManTxtQ.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.txtDegManTxtQ.Image = null;
-            this.txtDegManTxtQ.IsDerivedStyle = true;
-            this.txtDegManTxtQ.Lines = null;
-            this.txtDegManTxtQ.Location = new System.Drawing.Point(516, 116);
-            this.txtDegManTxtQ.MaxLength = 32767;
-            this.txtDegManTxtQ.Multiline = false;
-            this.txtDegManTxtQ.Name = "txtDegManTxtQ";
-            this.txtDegManTxtQ.ReadOnly = false;
-            this.txtDegManTxtQ.Size = new System.Drawing.Size(66, 29);
-            this.txtDegManTxtQ.Style = MetroSet_UI.Enums.Style.Light;
-            this.txtDegManTxtQ.StyleManager = null;
-            this.txtDegManTxtQ.TabIndex = 9;
-            this.txtDegManTxtQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtDegManTxtQ.ThemeAuthor = "Narwin";
-            this.txtDegManTxtQ.ThemeName = "MetroLite";
-            this.txtDegManTxtQ.UseSystemPasswordChar = false;
-            this.txtDegManTxtQ.WatermarkText = "";
-            // 
-            // comboxManAvailCrsforIns
-            // 
-            this.comboxManAvailCrsforIns.AllowDrop = true;
-            this.comboxManAvailCrsforIns.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.comboxManAvailCrsforIns.BackColor = System.Drawing.Color.Transparent;
-            this.comboxManAvailCrsforIns.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.comboxManAvailCrsforIns.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.comboxManAvailCrsforIns.CausesValidation = false;
-            this.comboxManAvailCrsforIns.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.comboxManAvailCrsforIns.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.comboxManAvailCrsforIns.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.comboxManAvailCrsforIns.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboxManAvailCrsforIns.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboxManAvailCrsforIns.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.comboxManAvailCrsforIns.FormattingEnabled = true;
-            this.comboxManAvailCrsforIns.IsDerivedStyle = true;
-            this.comboxManAvailCrsforIns.ItemHeight = 20;
-            this.comboxManAvailCrsforIns.Location = new System.Drawing.Point(166, 160);
-            this.comboxManAvailCrsforIns.Name = "comboxManAvailCrsforIns";
-            this.comboxManAvailCrsforIns.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.comboxManAvailCrsforIns.SelectedItemForeColor = System.Drawing.Color.White;
-            this.comboxManAvailCrsforIns.Size = new System.Drawing.Size(121, 26);
-            this.comboxManAvailCrsforIns.Style = MetroSet_UI.Enums.Style.Light;
-            this.comboxManAvailCrsforIns.StyleManager = null;
-            this.comboxManAvailCrsforIns.TabIndex = 10;
-            this.comboxManAvailCrsforIns.ThemeAuthor = "Narwin";
-            this.comboxManAvailCrsforIns.ThemeName = "MetroLite";
-            // 
-            // btnCrtManExam
-            // 
-            this.btnCrtManExam.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnCrtManExam.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnCrtManExam.DisabledForeColor = System.Drawing.Color.Gray;
-            this.btnCrtManExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnCrtManExam.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.btnCrtManExam.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.btnCrtManExam.HoverTextColor = System.Drawing.Color.White;
-            this.btnCrtManExam.IsDerivedStyle = true;
-            this.btnCrtManExam.Location = new System.Drawing.Point(516, 189);
-            this.btnCrtManExam.Name = "btnCrtManExam";
-            this.btnCrtManExam.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnCrtManExam.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btnCrtManExam.NormalTextColor = System.Drawing.Color.White;
-            this.btnCrtManExam.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.btnCrtManExam.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.btnCrtManExam.PressTextColor = System.Drawing.Color.White;
-            this.btnCrtManExam.Size = new System.Drawing.Size(115, 33);
-            this.btnCrtManExam.Style = MetroSet_UI.Enums.Style.Light;
-            this.btnCrtManExam.StyleManager = null;
-            this.btnCrtManExam.TabIndex = 11;
-            this.btnCrtManExam.Text = "Create Exam";
-            this.btnCrtManExam.ThemeAuthor = "Narwin";
-            this.btnCrtManExam.ThemeName = "MetroLite";
-            this.btnCrtManExam.Click += new System.EventHandler(this.btnCrtManExam_Click);
+            this.btnAssignStdtoExam.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAssignStdtoExam.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAssignStdtoExam.DisabledForeColor = System.Drawing.Color.Gray;
+            this.btnAssignStdtoExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnAssignStdtoExam.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnAssignStdtoExam.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.btnAssignStdtoExam.HoverTextColor = System.Drawing.Color.White;
+            this.btnAssignStdtoExam.IsDerivedStyle = true;
+            this.btnAssignStdtoExam.Location = new System.Drawing.Point(712, 34);
+            this.btnAssignStdtoExam.Name = "btnAssignStdtoExam";
+            this.btnAssignStdtoExam.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAssignStdtoExam.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.btnAssignStdtoExam.NormalTextColor = System.Drawing.Color.White;
+            this.btnAssignStdtoExam.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnAssignStdtoExam.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.btnAssignStdtoExam.PressTextColor = System.Drawing.Color.White;
+            this.btnAssignStdtoExam.Size = new System.Drawing.Size(75, 23);
+            this.btnAssignStdtoExam.Style = MetroSet_UI.Enums.Style.Light;
+            this.btnAssignStdtoExam.StyleManager = null;
+            this.btnAssignStdtoExam.TabIndex = 2;
+            this.btnAssignStdtoExam.Text = "Assign";
+            this.btnAssignStdtoExam.ThemeAuthor = "Narwin";
+            this.btnAssignStdtoExam.ThemeName = "MetroLite";
+            this.btnAssignStdtoExam.Click += new System.EventHandler(this.btnAssignStdtoExam_Click);
             // 
             // Form1
             // 
@@ -1260,8 +1350,9 @@
             this.Text = "Examination System";
             this.Tabs.ResumeLayout(false);
             this.Creat_Exam.ResumeLayout(false);
-            this.panelRandomly.ResumeLayout(false);
             this.panelManually.ResumeLayout(false);
+            this.panelRandomly.ResumeLayout(false);
+            this.Student_for_Exam.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1322,6 +1413,12 @@
         private MetroSet_UI.Controls.MetroSetTextBox txtDegManTFQ;
         private MetroSet_UI.Controls.MetroSetButton btnCrtManExam;
         private MetroSet_UI.Controls.MetroSetComboBox comboxManAvailCrsforIns;
+        private MetroSet_UI.Controls.MetroSetPanel panelTFQStructure;
+        private MetroSet_UI.Controls.MetroSetLabel lblTFQContent;
+        private MetroSet_UI.Controls.MetroSetTextBox txtTxtQAnswer;
+        private MetroSet_UI.Controls.MetroSetComboBox comboxAssignCourseNametoExam;
+        private MetroSet_UI.Controls.MetroSetComboBox comboxAssignStdNametoExam;
+        private MetroSet_UI.Controls.MetroSetButton btnAssignStdtoExam;
     }
 }
 

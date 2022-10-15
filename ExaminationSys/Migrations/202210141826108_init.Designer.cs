@@ -13,7 +13,7 @@ namespace ExaminationSys.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202210071952488_init"; }
+            get { return "202210141826108_init"; }
         }
         
         string IMigrationMetadata.Source

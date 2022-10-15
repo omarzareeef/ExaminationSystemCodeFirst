@@ -85,29 +85,17 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="MCQuestion.cs" />
-    <Compile Include="Migrations\202210071952488_init.cs" />
-    <Compile Include="Migrations\202210071952488_init.designer.cs">
-      <DependentUpon>202210071952488_init.cs</DependentUpon>
+    <Compile Include="Migrations\202210141826108_init.cs" />
+    <Compile Include="Migrations\202210141826108_init.designer.cs">
+      <DependentUpon>202210141826108_init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202210091533429_update1.cs" />
-    <Compile Include="Migrations\202210091533429_update1.designer.cs">
-      <DependentUpon>202210091533429_update1.cs</DependentUpon>
+    <Compile Include="Migrations\202210141858534_update1.cs" />
+    <Compile Include="Migrations\202210141858534_update1.designer.cs">
+      <DependentUpon>202210141858534_update1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202210101740093_update2.cs" />
-    <Compile Include="Migrations\202210101740093_update2.designer.cs">
-      <DependentUpon>202210101740093_update2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202210101752056_update3.cs" />
-    <Compile Include="Migrations\202210101752056_update3.designer.cs">
-      <DependentUpon>202210101752056_update3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202210121708145_update4.cs" />
-    <Compile Include="Migrations\202210121708145_update4.designer.cs">
-      <DependentUpon>202210121708145_update4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202210121827232_update5.cs" />
-    <Compile Include="Migrations\202210121827232_update5.designer.cs">
-      <DependentUpon>202210121827232_update5.cs</DependentUpon>
+    <Compile Include="Migrations\202210141910257_update2.cs" />
+    <Compile Include="Migrations\202210141910257_update2.designer.cs">
+      <DependentUpon>202210141910257_update2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -125,23 +113,14 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202210071952488_init.resx">
-      <DependentUpon>202210071952488_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202210141826108_init.resx">
+      <DependentUpon>202210141826108_init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202210091533429_update1.resx">
-      <DependentUpon>202210091533429_update1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202210141858534_update1.resx">
+      <DependentUpon>202210141858534_update1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202210101740093_update2.resx">
-      <DependentUpon>202210101740093_update2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202210101752056_update3.resx">
-      <DependentUpon>202210101752056_update3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202210121708145_update4.resx">
-      <DependentUpon>202210121708145_update4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202210121827232_update5.resx">
-      <DependentUpon>202210121827232_update5.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202210141910257_update2.resx">
+      <DependentUpon>202210141910257_update2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -8,6 +8,31 @@
         public override void Up()
         {
             CreateTable(
+                "dbo.Allowances",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        ExamId = c.Int(nullable: false),
+                        Calculator = c.Boolean(nullable: false),
+                        OpenBook = c.Boolean(nullable: false),
+                        UseInternet = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Exams", t => t.ExamId, cascadeDelete: true)
+                .Index(t => t.ExamId);
+            
+            CreateTable(
+                "dbo.Exams",
+                c => new
+                    {
+                        ExamId = c.Int(nullable: false, identity: true),
+                        StartTime = c.DateTime(nullable: false),
+                        EndTime = c.DateTime(nullable: false),
+                        IsCorrective = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.ExamId);
+            
+            CreateTable(
                 "dbo.BranchDetails",
                 c => new
                     {
@@ -64,12 +89,26 @@
                         InsId = c.Int(nullable: false, identity: true),
                         InsName = c.String(nullable: false, maxLength: 50),
                         InsUserName = c.String(nullable: false, maxLength: 50),
-                        InsPassword = c.Int(nullable: false),
+                        InsPassword = c.String(nullable: false),
                         SuperID = c.Int(nullable: false),
+                        User_ClassId = c.Int(),
                     })
                 .PrimaryKey(t => t.InsId)
                 .ForeignKey("dbo.Instructors", t => t.SuperID)
-                .Index(t => t.SuperID);
+                .ForeignKey("dbo.Users", t => t.User_ClassId)
+                .Index(t => t.SuperID)
+                .Index(t => t.User_ClassId);
+            
+            CreateTable(
+                "dbo.Users",
+                c => new
+                    {
+                        ClassId = c.Int(nullable: false, identity: true),
+                        UserName = c.String(nullable: false, maxLength: 50),
+                        UserType = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.ClassId)
+                .Index(t => t.UserName, unique: true);
             
             CreateTable(
                 "dbo.Departments",
@@ -98,8 +137,11 @@
                         StdEmail = c.String(nullable: false, maxLength: 50),
                         StdUserName = c.String(nullable: false, maxLength: 50),
                         StdPassword = c.String(nullable: false, maxLength: 50),
+                        User_ClassId = c.Int(),
                     })
-                .PrimaryKey(t => t.StdId);
+                .PrimaryKey(t => t.StdId)
+                .ForeignKey("dbo.Users", t => t.User_ClassId)
+                .Index(t => t.User_ClassId);
             
             CreateTable(
                 "dbo.Tracks",
@@ -145,46 +187,22 @@
                         QstDegree = c.Int(nullable: false),
                         QstType = c.String(nullable: false, maxLength: 3),
                         ExamId = c.Int(nullable: false),
-                        McqId = c.Int(nullable: false),
+                        MCQId = c.Int(nullable: false),
                         TFQId = c.Int(nullable: false),
-                        TxtId = c.Int(nullable: false),
+                        TXQId = c.Int(nullable: false),
                         CrsId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Courses", t => t.CrsId, cascadeDelete: true)
                 .ForeignKey("dbo.Exams", t => t.ExamId, cascadeDelete: true)
-                .ForeignKey("dbo.MCQuestions", t => t.McqId, cascadeDelete: true)
+                .ForeignKey("dbo.MCQuestions", t => t.MCQId, cascadeDelete: true)
                 .ForeignKey("dbo.TFQuestions", t => t.TFQId, cascadeDelete: true)
-                .ForeignKey("dbo.TxtQuestions", t => t.TxtId, cascadeDelete: true)
+                .ForeignKey("dbo.TxtQuestions", t => t.TXQId, cascadeDelete: true)
                 .Index(t => t.ExamId)
-                .Index(t => t.McqId)
+                .Index(t => t.MCQId)
                 .Index(t => t.TFQId)
-                .Index(t => t.TxtId)
+                .Index(t => t.TXQId)
                 .Index(t => t.CrsId);
-            
-            CreateTable(
-                "dbo.Exams",
-                c => new
-                    {
-                        ExamId = c.Int(nullable: false, identity: true),
-                        StartTime = c.DateTime(nullable: false),
-                        EndTime = c.DateTime(nullable: false),
-                        IsCorrective = c.Boolean(nullable: false),
-                    })
-                .PrimaryKey(t => t.ExamId);
-            
-            CreateTable(
-                "dbo.Allowances",
-                c => new
-                    {
-                        ExamId = c.Int(nullable: false),
-                        Calculator = c.Boolean(nullable: false),
-                        OpenBook = c.Boolean(nullable: false),
-                        UseInternet = c.Boolean(nullable: false),
-                    })
-                .PrimaryKey(t => t.ExamId)
-                .ForeignKey("dbo.Exams", t => t.ExamId)
-                .Index(t => t.ExamId);
             
             CreateTable(
                 "dbo.MCQuestions",
@@ -261,17 +279,6 @@
                 .Index(t => t.StdId)
                 .Index(t => t.ExamId);
             
-            CreateTable(
-                "dbo.Users",
-                c => new
-                    {
-                        ClassId = c.Int(nullable: false, identity: true),
-                        UserName = c.String(nullable: false, maxLength: 50),
-                        UserType = c.String(nullable: false, maxLength: 20),
-                    })
-                .PrimaryKey(t => t.ClassId)
-                .Index(t => t.UserName, unique: true);
-            
         }
         
         public override void Down()
@@ -279,42 +286,45 @@
             DropForeignKey("dbo.StudentExams", "StdId", "dbo.Students");
             DropForeignKey("dbo.StudentExams", "ExamId", "dbo.Exams");
             DropForeignKey("dbo.StdAnswers", "StdId", "dbo.Students");
-            DropForeignKey("dbo.ExamQuestions", "TxtId", "dbo.TxtQuestions");
+            DropForeignKey("dbo.ExamQuestions", "TXQId", "dbo.TxtQuestions");
             DropForeignKey("dbo.TxtQuestions", "CrsId", "dbo.Courses");
             DropForeignKey("dbo.ExamQuestions", "TFQId", "dbo.TFQuestions");
             DropForeignKey("dbo.TFQuestions", "CrsId", "dbo.Courses");
-            DropForeignKey("dbo.ExamQuestions", "McqId", "dbo.MCQuestions");
+            DropForeignKey("dbo.ExamQuestions", "MCQId", "dbo.MCQuestions");
             DropForeignKey("dbo.MCQuestions", "CrsId", "dbo.Courses");
             DropForeignKey("dbo.ExamQuestions", "ExamId", "dbo.Exams");
-            DropForeignKey("dbo.Allowances", "ExamId", "dbo.Exams");
             DropForeignKey("dbo.ExamQuestions", "CrsId", "dbo.Courses");
             DropForeignKey("dbo.CrsInsPerYears", "InsId", "dbo.Instructors");
             DropForeignKey("dbo.CrsInsPerYears", "CrsId", "dbo.Courses");
             DropForeignKey("dbo.CrsInsPerYears", "ClassId", "dbo.Classes");
             DropForeignKey("dbo.BranchDetails", "TrackId", "dbo.Tracks");
             DropForeignKey("dbo.BranchDetails", "StdId", "dbo.Students");
+            DropForeignKey("dbo.Students", "User_ClassId", "dbo.Users");
             DropForeignKey("dbo.BranchDetails", "IntakeId", "dbo.Intakes");
             DropForeignKey("dbo.BranchDetails", "DeptId", "dbo.Departments");
             DropForeignKey("dbo.BranchDetails", "CrsId", "dbo.Courses");
+            DropForeignKey("dbo.Instructors", "User_ClassId", "dbo.Users");
             DropForeignKey("dbo.Instructors", "SuperID", "dbo.Instructors");
             DropForeignKey("dbo.Courses", "InsId", "dbo.Instructors");
             DropForeignKey("dbo.BranchDetails", "BranchId", "dbo.Branches");
-            DropIndex("dbo.Users", new[] { "UserName" });
+            DropForeignKey("dbo.Allowances", "ExamId", "dbo.Exams");
             DropIndex("dbo.StudentExams", new[] { "ExamId" });
             DropIndex("dbo.StudentExams", new[] { "StdId" });
             DropIndex("dbo.StdAnswers", new[] { "StdId" });
             DropIndex("dbo.TxtQuestions", new[] { "CrsId" });
             DropIndex("dbo.TFQuestions", new[] { "CrsId" });
             DropIndex("dbo.MCQuestions", new[] { "CrsId" });
-            DropIndex("dbo.Allowances", new[] { "ExamId" });
             DropIndex("dbo.ExamQuestions", new[] { "CrsId" });
-            DropIndex("dbo.ExamQuestions", new[] { "TxtId" });
+            DropIndex("dbo.ExamQuestions", new[] { "TXQId" });
             DropIndex("dbo.ExamQuestions", new[] { "TFQId" });
-            DropIndex("dbo.ExamQuestions", new[] { "McqId" });
+            DropIndex("dbo.ExamQuestions", new[] { "MCQId" });
             DropIndex("dbo.ExamQuestions", new[] { "ExamId" });
             DropIndex("dbo.CrsInsPerYears", new[] { "InsId" });
             DropIndex("dbo.CrsInsPerYears", new[] { "CrsId" });
             DropIndex("dbo.CrsInsPerYears", new[] { "ClassId" });
+            DropIndex("dbo.Students", new[] { "User_ClassId" });
+            DropIndex("dbo.Users", new[] { "UserName" });
+            DropIndex("dbo.Instructors", new[] { "User_ClassId" });
             DropIndex("dbo.Instructors", new[] { "SuperID" });
             DropIndex("dbo.Courses", new[] { "InsId" });
             DropIndex("dbo.BranchDetails", new[] { "StdId" });
@@ -323,14 +333,12 @@
             DropIndex("dbo.BranchDetails", new[] { "BranchId" });
             DropIndex("dbo.BranchDetails", new[] { "IntakeId" });
             DropIndex("dbo.BranchDetails", new[] { "DeptId" });
-            DropTable("dbo.Users");
+            DropIndex("dbo.Allowances", new[] { "ExamId" });
             DropTable("dbo.StudentExams");
             DropTable("dbo.StdAnswers");
             DropTable("dbo.TxtQuestions");
             DropTable("dbo.TFQuestions");
             DropTable("dbo.MCQuestions");
-            DropTable("dbo.Allowances");
-            DropTable("dbo.Exams");
             DropTable("dbo.ExamQuestions");
             DropTable("dbo.CrsInsPerYears");
             DropTable("dbo.Classes");
@@ -338,10 +346,13 @@
             DropTable("dbo.Students");
             DropTable("dbo.Intakes");
             DropTable("dbo.Departments");
+            DropTable("dbo.Users");
             DropTable("dbo.Instructors");
             DropTable("dbo.Courses");
             DropTable("dbo.Branches");
             DropTable("dbo.BranchDetails");
+            DropTable("dbo.Exams");
+            DropTable("dbo.Allowances");
         }
     }
 }

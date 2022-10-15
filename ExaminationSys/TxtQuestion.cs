@@ -11,7 +11,7 @@ namespace ExaminationSys
     internal class TxtQuestion
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int TxtQId { get; set; }
+        public int TxtId { get; set; }
         [MaxLength(200), Required]
         public string TxtContent { get; set; }
         [MaxLength(200), Required]
