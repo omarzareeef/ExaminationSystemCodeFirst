@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Tabs = new MetroSet_UI.Controls.MetroSetTabControl();
             this.Creat_Exam = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.lblCreationMethod = new MetroSet_UI.Controls.MetroSetLabel();
@@ -76,7 +76,6 @@
             this.txtChoiceB = new MetroSet_UI.Controls.MetroSetTextBox();
             this.txtChoiceA = new MetroSet_UI.Controls.MetroSetTextBox();
             this.lblChoiceA = new MetroSet_UI.Controls.MetroSetLabel();
-            this.txtCourseID = new MetroSet_UI.Controls.MetroSetTextBox();
             this.txtQuestionDegree = new MetroSet_UI.Controls.MetroSetTextBox();
             this.txtTFAnswer = new MetroSet_UI.Controls.MetroSetTextBox();
             this.txtQuestionContent = new MetroSet_UI.Controls.MetroSetTextBox();
@@ -93,6 +92,7 @@
             this.Exams = new MetroSet_UI.Child.MetroSetSetTabPage();
             this.btnLogOut = new MetroSet_UI.Controls.MetroSetDefaultButton();
             this.lblClose = new MetroSet_UI.Controls.MetroSetLabel();
+            this.comboxCourseName = new MetroFramework.Controls.MetroComboBox();
             this.Tabs.SuspendLayout();
             this.Creat_Exam.SuspendLayout();
             this.panelRandomly.SuspendLayout();
@@ -687,6 +687,7 @@
             // Question_Pools
             // 
             this.Question_Pools.BaseColor = System.Drawing.Color.White;
+            this.Question_Pools.Controls.Add(this.comboxCourseName);
             this.Question_Pools.Controls.Add(this.txtTxtAnswer);
             this.Question_Pools.Controls.Add(this.lblTxtAnswer);
             this.Question_Pools.Controls.Add(this.lblMCQAnswer);
@@ -695,7 +696,6 @@
             this.Question_Pools.Controls.Add(this.btnAddQuestion);
             this.Question_Pools.Controls.Add(this.dataGridQuestions);
             this.Question_Pools.Controls.Add(this.metroSetPanel1);
-            this.Question_Pools.Controls.Add(this.txtCourseID);
             this.Question_Pools.Controls.Add(this.txtQuestionDegree);
             this.Question_Pools.Controls.Add(this.txtTFAnswer);
             this.Question_Pools.Controls.Add(this.txtQuestionContent);
@@ -747,12 +747,11 @@
             this.txtTxtAnswer.Style = MetroSet_UI.Enums.Style.Light;
             this.txtTxtAnswer.StyleManager = null;
             this.txtTxtAnswer.TabIndex = 24;
-            this.txtTxtAnswer.Text = "Best Answer";
             this.txtTxtAnswer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTxtAnswer.ThemeAuthor = "Narwin";
             this.txtTxtAnswer.ThemeName = "MetroLite";
             this.txtTxtAnswer.UseSystemPasswordChar = false;
-            this.txtTxtAnswer.WatermarkText = "";
+            this.txtTxtAnswer.WatermarkText = "Best Answer";
             // 
             // lblTxtAnswer
             // 
@@ -876,23 +875,23 @@
             this.dataGridQuestions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridQuestions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridQuestions.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridQuestions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridQuestions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridQuestions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridQuestions.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridQuestions.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridQuestions.EnableHeadersVisualStyles = false;
             this.dataGridQuestions.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dataGridQuestions.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -900,14 +899,14 @@
             this.dataGridQuestions.Name = "dataGridQuestions";
             this.dataGridQuestions.ReadOnly = true;
             this.dataGridQuestions.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridQuestions.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridQuestions.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridQuestions.RowHeadersWidth = 51;
             this.dataGridQuestions.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridQuestions.RowTemplate.Height = 24;
@@ -980,7 +979,7 @@
             this.txtChoiceC.IsDerivedStyle = true;
             this.txtChoiceC.Lines = null;
             this.txtChoiceC.Location = new System.Drawing.Point(55, 120);
-            this.txtChoiceC.MaxLength = 1;
+            this.txtChoiceC.MaxLength = 150;
             this.txtChoiceC.Multiline = false;
             this.txtChoiceC.Name = "txtChoiceC";
             this.txtChoiceC.ReadOnly = false;
@@ -988,12 +987,11 @@
             this.txtChoiceC.Style = MetroSet_UI.Enums.Style.Light;
             this.txtChoiceC.StyleManager = null;
             this.txtChoiceC.TabIndex = 2;
-            this.txtChoiceC.Text = "Answer C";
             this.txtChoiceC.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtChoiceC.ThemeAuthor = "Narwin";
             this.txtChoiceC.ThemeName = "MetroLite";
             this.txtChoiceC.UseSystemPasswordChar = false;
-            this.txtChoiceC.WatermarkText = "";
+            this.txtChoiceC.WatermarkText = "Answer C";
             // 
             // txtChoiceB
             // 
@@ -1010,7 +1008,7 @@
             this.txtChoiceB.IsDerivedStyle = true;
             this.txtChoiceB.Lines = null;
             this.txtChoiceB.Location = new System.Drawing.Point(55, 66);
-            this.txtChoiceB.MaxLength = 1;
+            this.txtChoiceB.MaxLength = 150;
             this.txtChoiceB.Multiline = false;
             this.txtChoiceB.Name = "txtChoiceB";
             this.txtChoiceB.ReadOnly = false;
@@ -1018,12 +1016,11 @@
             this.txtChoiceB.Style = MetroSet_UI.Enums.Style.Light;
             this.txtChoiceB.StyleManager = null;
             this.txtChoiceB.TabIndex = 1;
-            this.txtChoiceB.Text = "Answer B";
             this.txtChoiceB.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtChoiceB.ThemeAuthor = "Narwin";
             this.txtChoiceB.ThemeName = "MetroLite";
             this.txtChoiceB.UseSystemPasswordChar = false;
-            this.txtChoiceB.WatermarkText = "";
+            this.txtChoiceB.WatermarkText = "Answer B";
             // 
             // txtChoiceA
             // 
@@ -1040,7 +1037,7 @@
             this.txtChoiceA.IsDerivedStyle = true;
             this.txtChoiceA.Lines = null;
             this.txtChoiceA.Location = new System.Drawing.Point(55, 12);
-            this.txtChoiceA.MaxLength = 1;
+            this.txtChoiceA.MaxLength = 150;
             this.txtChoiceA.Multiline = false;
             this.txtChoiceA.Name = "txtChoiceA";
             this.txtChoiceA.ReadOnly = false;
@@ -1048,12 +1045,11 @@
             this.txtChoiceA.Style = MetroSet_UI.Enums.Style.Light;
             this.txtChoiceA.StyleManager = null;
             this.txtChoiceA.TabIndex = 0;
-            this.txtChoiceA.Text = "Answer A";
             this.txtChoiceA.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtChoiceA.ThemeAuthor = "Narwin";
             this.txtChoiceA.ThemeName = "MetroLite";
             this.txtChoiceA.UseSystemPasswordChar = false;
-            this.txtChoiceA.WatermarkText = "";
+            this.txtChoiceA.WatermarkText = "Answer A";
             // 
             // lblChoiceA
             // 
@@ -1068,36 +1064,6 @@
             this.lblChoiceA.Text = "A.";
             this.lblChoiceA.ThemeAuthor = "Narwin";
             this.lblChoiceA.ThemeName = "MetroLite";
-            // 
-            // txtCourseID
-            // 
-            this.txtCourseID.AutoCompleteCustomSource = null;
-            this.txtCourseID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtCourseID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtCourseID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.txtCourseID.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtCourseID.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
-            this.txtCourseID.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.txtCourseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtCourseID.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.txtCourseID.Image = null;
-            this.txtCourseID.IsDerivedStyle = true;
-            this.txtCourseID.Lines = null;
-            this.txtCourseID.Location = new System.Drawing.Point(646, 422);
-            this.txtCourseID.MaxLength = 32767;
-            this.txtCourseID.Multiline = false;
-            this.txtCourseID.Name = "txtCourseID";
-            this.txtCourseID.ReadOnly = false;
-            this.txtCourseID.Size = new System.Drawing.Size(66, 30);
-            this.txtCourseID.Style = MetroSet_UI.Enums.Style.Light;
-            this.txtCourseID.StyleManager = null;
-            this.txtCourseID.TabIndex = 15;
-            this.txtCourseID.Text = "Course ID";
-            this.txtCourseID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtCourseID.ThemeAuthor = "Narwin";
-            this.txtCourseID.ThemeName = "MetroLite";
-            this.txtCourseID.UseSystemPasswordChar = false;
-            this.txtCourseID.WatermarkText = "";
             // 
             // txtQuestionDegree
             // 
@@ -1127,7 +1093,7 @@
             this.txtQuestionDegree.ThemeAuthor = "Narwin";
             this.txtQuestionDegree.ThemeName = "MetroLite";
             this.txtQuestionDegree.UseSystemPasswordChar = false;
-            this.txtQuestionDegree.WatermarkText = "";
+            this.txtQuestionDegree.WatermarkText = "Degree";
             // 
             // txtTFAnswer
             // 
@@ -1182,12 +1148,11 @@
             this.txtQuestionContent.Style = MetroSet_UI.Enums.Style.Light;
             this.txtQuestionContent.StyleManager = null;
             this.txtQuestionContent.TabIndex = 12;
-            this.txtQuestionContent.Text = "Question Content...";
             this.txtQuestionContent.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtQuestionContent.ThemeAuthor = "Narwin";
             this.txtQuestionContent.ThemeName = "MetroLite";
             this.txtQuestionContent.UseSystemPasswordChar = false;
-            this.txtQuestionContent.WatermarkText = "";
+            this.txtQuestionContent.WatermarkText = "Question Content...";
             // 
             // txtID
             // 
@@ -1212,12 +1177,11 @@
             this.txtID.Style = MetroSet_UI.Enums.Style.Light;
             this.txtID.StyleManager = null;
             this.txtID.TabIndex = 11;
-            this.txtID.Text = "ID";
             this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtID.ThemeAuthor = "Narwin";
             this.txtID.ThemeName = "MetroLite";
             this.txtID.UseSystemPasswordChar = false;
-            this.txtID.WatermarkText = "";
+            this.txtID.WatermarkText = "ID";
             // 
             // lblQuestionID
             // 
@@ -1267,11 +1231,11 @@
             this.lblCourseID.IsDerivedStyle = true;
             this.lblCourseID.Location = new System.Drawing.Point(457, 422);
             this.lblCourseID.Name = "lblCourseID";
-            this.lblCourseID.Size = new System.Drawing.Size(166, 23);
+            this.lblCourseID.Size = new System.Drawing.Size(244, 27);
             this.lblCourseID.Style = MetroSet_UI.Enums.Style.Light;
             this.lblCourseID.StyleManager = null;
             this.lblCourseID.TabIndex = 7;
-            this.lblCourseID.Text = "Course ID";
+            this.lblCourseID.Text = "Course Name";
             this.lblCourseID.ThemeAuthor = "Narwin";
             this.lblCourseID.ThemeName = "MetroLite";
             // 
@@ -1443,6 +1407,16 @@
             this.lblClose.ThemeName = "MetroLite";
             this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
             // 
+            // comboxCourseName
+            // 
+            this.comboxCourseName.FormattingEnabled = true;
+            this.comboxCourseName.ItemHeight = 24;
+            this.comboxCourseName.Location = new System.Drawing.Point(630, 419);
+            this.comboxCourseName.Name = "comboxCourseName";
+            this.comboxCourseName.Size = new System.Drawing.Size(121, 30);
+            this.comboxCourseName.TabIndex = 25;
+            this.comboxCourseName.UseSelectable = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
@@ -1512,7 +1486,6 @@
         private MetroSet_UI.Controls.MetroSetLabel lblQuestionFullDegree;
         private MetroSet_UI.Controls.MetroSetTextBox txtTFAnswer;
         private MetroSet_UI.Controls.MetroSetPanel metroSetPanel1;
-        private MetroSet_UI.Controls.MetroSetTextBox txtCourseID;
         private MetroSet_UI.Controls.MetroSetTextBox txtQuestionDegree;
         private MetroSet_UI.Controls.MetroSetLabel lblChoiceA;
         private MetroSet_UI.Controls.MetroSetTextBox txtChoiceC;
@@ -1527,6 +1500,7 @@
         private MetroSet_UI.Controls.MetroSetTextBox txtMSQAnswer;
         private MetroSet_UI.Controls.MetroSetLabel lblTxtAnswer;
         private MetroSet_UI.Controls.MetroSetTextBox txtTxtAnswer;
+        private MetroFramework.Controls.MetroComboBox comboxCourseName;
     }
 }
 

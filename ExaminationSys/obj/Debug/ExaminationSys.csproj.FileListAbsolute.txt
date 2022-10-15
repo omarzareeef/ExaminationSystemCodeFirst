@@ -67,3 +67,27 @@ F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\obj\Debug\ExaminationSys.
 F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\obj\Debug\ExaminationSys.exe
 F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\obj\Debug\ExaminationSys.pdb
 F:\ITI\C# Project\Git C# Project - Copy\ExaminationSys\obj\Debug\ExaminationSys.Migrations.init.resources
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\obj\Debug\ExaminationSys.csproj.AssemblyReference.cache
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\obj\Debug\ExaminationSys.csproj.SuggestedBindingRedirects.cache
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\obj\Debug\ExaminationSys.Form1.resources
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\obj\Debug\ExaminationSys.Login.resources
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\obj\Debug\ExaminationSys.Migrations.init.resources
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\obj\Debug\ExaminationSys.Properties.Resources.resources
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\obj\Debug\ExaminationSys.csproj.GenerateResource.cache
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\obj\Debug\ExaminationSys.csproj.CoreCompileInputs.cache
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\obj\Debug\ExaminationSys.exe
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\obj\Debug\ExaminationSys.pdb
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\bin\Debug\ExaminationSys.exe.config
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\bin\Debug\ExaminationSys.exe
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\bin\Debug\ExaminationSys.pdb
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\bin\Debug\DocumentFormat.OpenXml.dll
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\bin\Debug\EntityFramework.dll
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\bin\Debug\EntityFramework.SqlServer.dll
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\bin\Debug\MetroFramework.Design.dll
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\bin\Debug\MetroFramework.dll
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\bin\Debug\MetroFramework.Fonts.dll
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\bin\Debug\MetroSet UI.dll
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\bin\Debug\DocumentFormat.OpenXml.xml
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\bin\Debug\EntityFramework.xml
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\bin\Debug\EntityFramework.SqlServer.xml
+F:\ITI\C# Project\Git C# Project - Islam\ExaminationSys\obj\Debug\ExaminationSys.csproj.CopyComplete

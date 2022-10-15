@@ -75,12 +75,11 @@
             this.txtUserName.Style = MetroSet_UI.Enums.Style.Light;
             this.txtUserName.StyleManager = null;
             this.txtUserName.TabIndex = 2;
-            this.txtUserName.Text = "Enter User Name";
             this.txtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUserName.ThemeAuthor = "Narwin";
             this.txtUserName.ThemeName = "MetroLite";
             this.txtUserName.UseSystemPasswordChar = false;
-            this.txtUserName.WatermarkText = "";
+            this.txtUserName.WatermarkText = "Enter Username";
             // 
             // txtPassword
             // 
@@ -105,12 +104,11 @@
             this.txtPassword.Style = MetroSet_UI.Enums.Style.Light;
             this.txtPassword.StyleManager = null;
             this.txtPassword.TabIndex = 3;
-            this.txtPassword.Text = "Enter Password";
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPassword.ThemeAuthor = "Narwin";
             this.txtPassword.ThemeName = "MetroLite";
-            this.txtPassword.UseSystemPasswordChar = false;
-            this.txtPassword.WatermarkText = "";
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.WatermarkText = "Enter Password";
             // 
             // lblPassword
             // 

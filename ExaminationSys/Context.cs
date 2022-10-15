@@ -10,7 +10,7 @@ namespace ExaminationSys
     internal class Context : DbContext
     {
         public Context () 
-            : base(@"data source =.; initial catalog = ExaminationTest; integrated security = True") { }
+            : base(@"data source =.; initial catalog = ExaminationSystemCF; integrated security = True") { }
 
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Branch> Branches { get; set; }

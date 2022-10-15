@@ -37,6 +37,7 @@ namespace ExaminationSys
                     if(student != null)
                     {
                         key.SetValue("UserType", "Std");
+                        key.SetValue("ID", student.StdId);
                         isAuthorized = true;
                     }
                     else
@@ -51,6 +52,7 @@ namespace ExaminationSys
                     if (instructor != null)
                     {
                         key.SetValue("UserType", "InsTMan");
+                        key.SetValue("ID", instructor.InsId);
                         isAuthorized = true;
                     }
                     else
@@ -65,6 +67,7 @@ namespace ExaminationSys
                     if (instructor != null)
                     {
                         key.SetValue("UserType", "Ins");
+                        key.SetValue("ID", instructor.InsId);
                         isAuthorized = true;
                     }
                     else

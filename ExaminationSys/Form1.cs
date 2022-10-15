@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using MetroSet_UI.Forms;
 using Microsoft.Win32;
 using System.Text.RegularExpressions;
+using DocumentFormat.OpenXml.Office2010.Excel;
+using MetroFramework;
 
 
 //Copy
@@ -19,13 +21,21 @@ namespace ExaminationSys
 {
     public partial class Form1 : MetroSetForm
     {
+        
+        int id = 0;
         public Form1()
         {
-
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\OurSettings");
+            
             InitializeComponent();
+
+            id = (int)key.GetValue("ID");
+
+            var crs = context.Courses.Where(i => i.InsId == id).Select(i => i.CrsTitle).ToList();
+            comboxCourseName.Items.AddRange(crs.ToArray());
+
             #region What for Who
 
-            RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\OurSettings");
             string role = "";
             //if it does exist, retrieve the stored values  
             if (key != null)
@@ -105,7 +115,6 @@ namespace ExaminationSys
                 txtQuestionContent.ResetText();
                 txtTFAnswer.ResetText();
                 txtQuestionDegree.ResetText();
-                txtCourseID.ResetText();
                 txtChoiceA.ResetText();
                 txtChoiceB.ResetText();
                 txtChoiceC.ResetText();
@@ -132,7 +141,6 @@ namespace ExaminationSys
                 txtQuestionContent.ResetText();
                 txtTFAnswer.ResetText();
                 txtQuestionDegree.ResetText();
-                txtCourseID.ResetText();
                 txtChoiceA.ResetText();
                 txtChoiceB.ResetText();
                 txtChoiceC.ResetText();
@@ -158,7 +166,6 @@ namespace ExaminationSys
                 txtQuestionContent.ResetText();
                 txtTFAnswer.ResetText();
                 txtQuestionDegree.ResetText();
-                txtCourseID.ResetText();
                 txtChoiceA.ResetText();
                 txtChoiceB.ResetText();
                 txtChoiceC.ResetText();
@@ -197,7 +204,7 @@ namespace ExaminationSys
                         txtChoiceB.Text = dataGridQuestions.Rows[e.RowIndex].Cells["Choice2"].FormattedValue.ToString();
                         txtChoiceC.Text = dataGridQuestions.Rows[e.RowIndex].Cells["Choice3"].FormattedValue.ToString();
                         txtQuestionDegree.Text = dataGridQuestions.Rows[e.RowIndex].Cells["McqFullDegree"].FormattedValue.ToString();
-                        txtCourseID.Text = dataGridQuestions.Rows[e.RowIndex].Cells["CrsId"].FormattedValue.ToString();
+                        
                     }
                 }
                 else if (comboxQuestionType.SelectedIndex == 1)
@@ -211,7 +218,7 @@ namespace ExaminationSys
                         txtQuestionContent.Text = dataGridQuestions.Rows[e.RowIndex].Cells["TfqContent"].FormattedValue.ToString();
                         txtTFAnswer.Text = dataGridQuestions.Rows[e.RowIndex].Cells["TfqCorrectAnswer"].FormattedValue.ToString();
                         txtQuestionDegree.Text = dataGridQuestions.Rows[e.RowIndex].Cells["TfqFullDegree"].FormattedValue.ToString();
-                        txtCourseID.Text = dataGridQuestions.Rows[e.RowIndex].Cells["CrsId"].FormattedValue.ToString();
+                        
                     }
                 }
                 else
@@ -225,7 +232,7 @@ namespace ExaminationSys
                         txtQuestionContent.Text = dataGridQuestions.Rows[e.RowIndex].Cells["TxtContent"].FormattedValue.ToString();
                         txtTxtAnswer.Text = dataGridQuestions.Rows[e.RowIndex].Cells["TxtBestAnswer"].FormattedValue.ToString();
                         txtQuestionDegree.Text = dataGridQuestions.Rows[e.RowIndex].Cells["TxtFullDegree"].FormattedValue.ToString();
-                        txtCourseID.Text = dataGridQuestions.Rows[e.RowIndex].Cells["CrsId"].FormattedValue.ToString();
+                        
                     }
                 }
             }
@@ -275,7 +282,8 @@ namespace ExaminationSys
                 var ChoiceB = txtChoiceB.Text;
                 var ChoiceC = txtChoiceC.Text;
                 var CorrectChoice = char.Parse(txtMSQAnswer.Text);
-                var CrsID = int.Parse(txtCourseID.Text);
+                var CourseTitle = comboxCourseName.Text.ToString();
+                var CrsID = context.Courses.Where(c => c.InsId == id && c.CrsTitle == CourseTitle).Select(i => i.CrsId).FirstOrDefault();
 
                 if (comboxOperation.SelectedIndex == 0 && comboxQuestionType.SelectedIndex == 0)
                 {
@@ -295,7 +303,7 @@ namespace ExaminationSys
                     context.SaveChanges();
                     var MCQType = context.MCQuestions.Select(m => m).ToList();
                     dataGridQuestions.DataSource = MCQType;
-                    MessageBox.Show("Done");
+                    MetroMessageBox.Show(this, "Done");
                 }
                 else if (comboxOperation.SelectedIndex == 0 && comboxQuestionType.SelectedIndex == 1)
                 {
@@ -330,7 +338,7 @@ namespace ExaminationSys
             //}
             catch
             {
-                MessageBox.Show("No Data To Be Added or Missing Data or Wrong Data Type");
+                MetroMessageBox.Show(this, "No Data To Be Added or Missing Data or Wrong Data Type");
             }
 
 
@@ -354,6 +362,8 @@ namespace ExaminationSys
                 var ChoiceB = txtChoiceB.Text;
                 var ChoiceC = txtChoiceC.Text;
                 var CorrectChoice = char.Parse(txtMSQAnswer.Text);
+                var CourseTitle = comboxCourseName.Text.ToString();
+                var CrsID = context.Courses.Where(c => c.InsId == id && c.CrsTitle == CourseTitle).Select(i => i.CrsId).FirstOrDefault();
 
 
                 if (comboxOperation.SelectedIndex == 1 && comboxQuestionType.SelectedIndex == 0)
@@ -366,6 +376,7 @@ namespace ExaminationSys
                     mCQuestion.Choice1 = ChoiceA;
                     mCQuestion.Choice2 = ChoiceB;
                     mCQuestion.Choice3 = ChoiceC;
+                    mCQuestion.CrsId = CrsID;
 
                     context.SaveChanges();
                     var MCQType = context.MCQuestions.Select(m => m).ToList();
@@ -379,6 +390,7 @@ namespace ExaminationSys
                     tFQuestion.TfqContent = QuestionContent;
                     tFQuestion.TfqCorrectAnswer = TFAnswer;
                     tFQuestion.TfqFullDegree = FullDegree;
+                    tFQuestion.CrsId = CrsID;
 
                     context.SaveChanges();
                     var TFType = context.MCQuestions.Select(m => m).ToList();
@@ -391,6 +403,7 @@ namespace ExaminationSys
                     textQuestion.TxtContent = QuestionContent;
                     textQuestion.TxtBestAnswer = TxtAnswer;
                     textQuestion.TxtFullDegree = FullDegree;
+                    textQuestion.CrsId = CrsID;
 
                     context.SaveChanges();
                     var TxtType = context.MCQuestions.Select(x => x).ToList();
@@ -400,16 +413,10 @@ namespace ExaminationSys
             }
             catch
             {
-                MessageBox.Show("No Data To Be Updated or Missing Data or Wrong Data Type");
+                MetroMessageBox.Show(this, "No Data To Be Updated or Missing Data or Wrong Data Type");
+                
             };
-
-            
         }
-
-
-
-
-
         #endregion
 
         #endregion
